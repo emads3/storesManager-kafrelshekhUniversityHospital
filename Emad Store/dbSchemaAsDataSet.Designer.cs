@@ -855,13 +855,6 @@ namespace Emad_Store {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public sv_get_all_bills_with_unitsRow FindBytrans_id(int trans_id) {
-                return ((sv_get_all_bills_with_unitsRow)(this.Rows.Find(new object[] {
-                            trans_id})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 sv_get_all_bills_with_unitsDataTable cln = ((sv_get_all_bills_with_unitsDataTable)(base.Clone()));
                 cln.InitVars();
@@ -909,13 +902,10 @@ namespace Emad_Store {
                 base.Columns.Add(this.columnphone_num);
                 this.columndept_name = new global::System.Data.DataColumn("dept_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndept_name);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columntrans_id}, true));
                 this.columnunit_name.MaxLength = 200;
                 this.columnstock_quantity.ReadOnly = true;
                 this.columnstock_quantity.MaxLength = 131;
                 this.columntrans_id.AllowDBNull = false;
-                this.columntrans_id.Unique = true;
                 this.columnreceiver_name.MaxLength = 100;
                 this.columntrans_time.AllowDBNull = false;
                 this.columnnotes.MaxLength = 200;

@@ -430,7 +430,8 @@ namespace Emad_Store.Views
 				SqlDataAdapter da = new SqlDataAdapter();// dataadapter used to fill the dataset
 				Reports.inOutStockBills.rpt_printSingleBill r = new Reports.inOutStockBills.rpt_printSingleBill();// object of the report
 
-				productsController.getBillReport(Convert.ToInt32(txtNewBillNum.Text)).Fill(ds, "sv_get_all_bills_with_units");
+				da = productsController.getBillReport(Convert.ToInt32(txtNewBillNum.Text));
+				da.Fill(ds, "sv_get_all_bills_with_units");
 				r.Refresh();
 				r.SetDataSource(ds);
 				Reports.frm_crRpt f = new Reports.frm_crRpt();// object of the report viewer form

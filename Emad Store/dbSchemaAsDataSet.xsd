@@ -14,7 +14,7 @@
   <xs:element name="dbSchemaAsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dbSchemaAsDataSet" msprop:Generator_UserDSName="dbSchemaAsDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="v_get_products_with_details" msprop:Generator_TableClassName="v_get_products_with_detailsDataTable" msprop:Generator_TableVarName="tablev_get_products_with_details" msprop:Generator_RowChangedName="v_get_products_with_detailsRowChanged" msprop:Generator_TablePropName="v_get_products_with_details" msprop:Generator_RowDeletingName="v_get_products_with_detailsRowDeleting" msprop:Generator_RowChangingName="v_get_products_with_detailsRowChanging" msprop:Generator_RowEvHandlerName="v_get_products_with_detailsRowChangeEventHandler" msprop:Generator_RowDeletedName="v_get_products_with_detailsRowDeleted" msprop:Generator_RowClassName="v_get_products_with_detailsRow" msprop:Generator_UserTableName="v_get_products_with_details" msprop:Generator_RowEvArgName="v_get_products_with_detailsRowChangeEvent">
+        <xs:element name="v_get_products_with_details" msprop:Generator_TableClassName="v_get_products_with_detailsDataTable" msprop:Generator_TableVarName="tablev_get_products_with_details" msprop:Generator_TablePropName="v_get_products_with_details" msprop:Generator_RowDeletingName="v_get_products_with_detailsRowDeleting" msprop:Generator_RowChangingName="v_get_products_with_detailsRowChanging" msprop:Generator_RowEvHandlerName="v_get_products_with_detailsRowChangeEventHandler" msprop:Generator_RowDeletedName="v_get_products_with_detailsRowDeleted" msprop:Generator_UserTableName="v_get_products_with_details" msprop:Generator_RowChangedName="v_get_products_with_detailsRowChanged" msprop:Generator_RowEvArgName="v_get_products_with_detailsRowChangeEvent" msprop:Generator_RowClassName="v_get_products_with_detailsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="unit_id" msprop:Generator_ColumnVarNameInTable="columnunit_id" msprop:Generator_ColumnPropNameInRow="unit_id" msprop:Generator_ColumnPropNameInTable="unit_idColumn" msprop:Generator_UserColumnName="unit_id" type="xs:int" />
@@ -58,7 +58,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="sv_get_all_bills_with_units" msprop:Generator_TableClassName="sv_get_all_bills_with_unitsDataTable" msprop:Generator_TableVarName="tablesv_get_all_bills_with_units" msprop:Generator_TablePropName="sv_get_all_bills_with_units" msprop:Generator_RowDeletingName="sv_get_all_bills_with_unitsRowDeleting" msprop:Generator_RowChangingName="sv_get_all_bills_with_unitsRowChanging" msprop:Generator_RowEvHandlerName="sv_get_all_bills_with_unitsRowChangeEventHandler" msprop:Generator_RowDeletedName="sv_get_all_bills_with_unitsRowDeleted" msprop:Generator_UserTableName="sv_get_all_bills_with_units" msprop:Generator_RowChangedName="sv_get_all_bills_with_unitsRowChanged" msprop:Generator_RowEvArgName="sv_get_all_bills_with_unitsRowChangeEvent" msprop:Generator_RowClassName="sv_get_all_bills_with_unitsRow">
+        <xs:element name="sv_get_all_bills_with_units" msprop:Generator_TableClassName="sv_get_all_bills_with_unitsDataTable" msprop:Generator_TableVarName="tablesv_get_all_bills_with_units" msprop:Generator_RowChangedName="sv_get_all_bills_with_unitsRowChanged" msprop:Generator_TablePropName="sv_get_all_bills_with_units" msprop:Generator_RowDeletingName="sv_get_all_bills_with_unitsRowDeleting" msprop:Generator_RowChangingName="sv_get_all_bills_with_unitsRowChanging" msprop:Generator_RowEvHandlerName="sv_get_all_bills_with_unitsRowChangeEventHandler" msprop:Generator_RowDeletedName="sv_get_all_bills_with_unitsRowDeleted" msprop:Generator_RowClassName="sv_get_all_bills_with_unitsRow" msprop:Generator_UserTableName="sv_get_all_bills_with_units" msprop:Generator_RowEvArgName="sv_get_all_bills_with_unitsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="unit_name" msprop:Generator_ColumnVarNameInTable="columnunit_name" msprop:Generator_ColumnPropNameInRow="unit_name" msprop:Generator_ColumnPropNameInTable="unit_nameColumn" msprop:Generator_UserColumnName="unit_name" minOccurs="0">
@@ -120,10 +120,6 @@
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:v_get_products_with_details" />
       <xs:field xpath="mstns:unit_id" />
-    </xs:unique>
-    <xs:unique name="sv_get_all_bills_with_units_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:sv_get_all_bills_with_units" />
-      <xs:field xpath="mstns:trans_id" />
     </xs:unique>
   </xs:element>
 </xs:schema>
