@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C60B63C4-8055-450F-B688-D9A167639A32}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Emad_Store</RootNamespace>
+    <AssemblyName>Emad Store</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>75FFCF61B519FAACAA7D70FB88B040FC49AFF2A9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Emad Store_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\CLS_Categories.cs" />
+    <Compile Include="Controllers\CLS_dbSettings.cs" />
+    <Compile Include="Controllers\CLS_reportsAndInfo.cs" />
+    <Compile Include="Controllers\CLS_Session.cs" />
+    <Compile Include="Controllers\CLS_Products.cs" />
+    <Compile Include="Controllers\CLS_RuntimeInfo.cs" />
+    <Compile Include="Controllers\CLS_Settings.cs" />
+    <Compile Include="dbSchemaAsDataSet.cs">
+      <DependentUpon>dbSchemaAsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbSchemaAsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbSchemaAsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataAcessLayer.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\deleteThisReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>deleteThisReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\frm_crRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frm_crRpt.Designer.cs">
+      <DependentUpon>frm_crRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpt_printSingleBill.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_printSingleBill.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rpt_productsAboutToFinish.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_productsAboutToFinish.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rpt_singleCategoryProducts.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_singleCategoryProducts.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\frm_addCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_addCategory.Designer.cs">
+      <DependentUpon>frm_addCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frm_addProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_addProduct.Designer.cs">
+      <DependentUpon>frm_addProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frm_DbSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_DbSettings.Designer.cs">
+      <DependentUpon>frm_DbSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frm_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_main.Designer.cs">
+      <DependentUpon>frm_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frm_mngCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_mngCategories.Designer.cs">
+      <DependentUpon>frm_mngCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frm_mngProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_mngProducts.Designer.cs">
+      <DependentUpon>frm_mngProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\frm_outProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_outProducts.Designer.cs">
+      <DependentUpon>frm_outProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frm_reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_reports.Designer.cs">
+      <DependentUpon>frm_reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpt_all_products.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_all_products.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rpt_single_unit.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_single_unit.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Reports\deleteThisReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>deleteThisReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frm_crRpt.resx">
+      <DependentUpon>frm_crRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_printSingleBill.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_printSingleBill.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_productsAboutToFinish.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_productsAboutToFinish.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_singleCategoryProducts.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_singleCategoryProducts.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_addCategory.resx">
+      <DependentUpon>frm_addCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_addProduct.resx">
+      <DependentUpon>frm_addProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_DbSettings.resx">
+      <DependentUpon>frm_DbSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_main.resx">
+      <DependentUpon>frm_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_mngCategories.resx">
+      <DependentUpon>frm_mngCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_mngProducts.resx">
+      <DependentUpon>frm_mngProducts.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_outProducts.resx">
+      <DependentUpon>frm_outProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_reports.resx">
+      <DependentUpon>frm_reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_all_products.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_all_products.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_single_unit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_single_unit.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="dbSchemaAsDataSet.xsc">
+      <DependentUpon>dbSchemaAsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbSchemaAsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbSchemaAsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dbSchemaAsDataSet.xss">
+      <DependentUpon>dbSchemaAsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Emad Store_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text preview.png" />
+    <None Include="Resources\Table.png" />
+    <None Include="Resources\Shopping cart.png" />
+    <None Include="Resources\Report.png" />
+    <None Include="Resources\Pinion.png" />
+    <None Include="Resources\Phone.png" />
+    <None Include="Resources\Person.png" />
+    <None Include="Resources\People.png" />
+    <None Include="Resources\New document.png" />
+    <None Include="Resources\Male.png" />
+    <None Include="Resources\Mail.png" />
+    <None Include="Resources\Lock.png" />
+    <None Include="Resources\Key.png" />
+    <None Include="Resources\Hint.png" />
+    <None Include="Resources\Globe.png" />
+    <None Include="Resources\Forbidden.png" />
+    <None Include="Resources\E-mail.png" />
+    <None Include="Resources\Cancel.png" />
+    <None Include="Resources\Boss.png" />
+    <None Include="Resources\Blue key.png" />
+    <None Include="Resources\Warning.png" />
+    <None Include="Resources\Unlock.png" />
+    <None Include="Resources\Trash.png" />
+    <None Include="Resources\Text.png" />
+    <None Include="Resources\Display 16x16.png" />
+    <None Include="Resources\if_excel_272697.png" />
+    <None Include="Resources\document.png" />
+    <None Include="Resources\if_pdf_272711.png" />
+    <None Include="Resources\3d bar chart.png" />
+    <None Include="Resources\Home.png" />
+    <None Include="Resources\Turn off.png" />
+    <None Include="Resources\Yes.png" />
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\Print.png" />
+    <None Include="Resources\Modify.png" />
+    <None Include="Resources\Go back.png" />
+    <None Include="Resources\Go forward.png" />
+    <None Include="Resources\Last.png" />
+    <None Include="Resources\First.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\Refresh.png" />
+    <None Include="Resources\Create.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <Content Include="kfs_hospital.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="kfs_hospital_log.ldf">
+      <DependentUpon>kfs_hospital.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

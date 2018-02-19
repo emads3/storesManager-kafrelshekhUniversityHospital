@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dbSchemaAsDataSet" targetNamespace="http://tempuri.org/dbSchemaAsDataSet.xsd" xmlns:mstns="http://tempuri.org/dbSchemaAsDataSet.xsd" xmlns="http://tempuri.org/dbSchemaAsDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="kfs_hospitalConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="kfs_hospitalConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Emad_Store.Properties.Settings.GlobalReference.Default.kfs_hospitalConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dbSchemaAsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dbSchemaAsDataSet" msprop:Generator_UserDSName="dbSchemaAsDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="v_get_products_with_details" msprop:Generator_TableClassName="v_get_products_with_detailsDataTable" msprop:Generator_TableVarName="tablev_get_products_with_details" msprop:Generator_TablePropName="v_get_products_with_details" msprop:Generator_RowDeletingName="v_get_products_with_detailsRowDeleting" msprop:Generator_RowChangingName="v_get_products_with_detailsRowChanging" msprop:Generator_RowEvHandlerName="v_get_products_with_detailsRowChangeEventHandler" msprop:Generator_RowDeletedName="v_get_products_with_detailsRowDeleted" msprop:Generator_UserTableName="v_get_products_with_details" msprop:Generator_RowChangedName="v_get_products_with_detailsRowChanged" msprop:Generator_RowEvArgName="v_get_products_with_detailsRowChangeEvent" msprop:Generator_RowClassName="v_get_products_with_detailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="unit_id" msprop:Generator_ColumnVarNameInTable="columnunit_id" msprop:Generator_ColumnPropNameInRow="unit_id" msprop:Generator_ColumnPropNameInTable="unit_idColumn" msprop:Generator_UserColumnName="unit_id" type="xs:int" />
+              <xs:element name="unit_name" msprop:Generator_ColumnVarNameInTable="columnunit_name" msprop:Generator_ColumnPropNameInRow="unit_name" msprop:Generator_ColumnPropNameInTable="unit_nameColumn" msprop:Generator_UserColumnName="unit_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="stock_quantity" msprop:Generator_ColumnVarNameInTable="columnstock_quantity" msprop:Generator_ColumnPropNameInRow="stock_quantity" msprop:Generator_ColumnPropNameInTable="stock_quantityColumn" msprop:Generator_UserColumnName="stock_quantity" type="xs:int" minOccurs="0" />
+              <xs:element name="alert_quantity" msprop:Generator_ColumnVarNameInTable="columnalert_quantity" msprop:Generator_ColumnPropNameInRow="alert_quantity" msprop:Generator_ColumnPropNameInTable="alert_quantityColumn" msprop:Generator_UserColumnName="alert_quantity" type="xs:int" minOccurs="0" />
+              <xs:element name="msr_unt_name" msprop:Generator_ColumnVarNameInTable="columnmsr_unt_name" msprop:Generator_ColumnPropNameInRow="msr_unt_name" msprop:Generator_ColumnPropNameInTable="msr_unt_nameColumn" msprop:Generator_UserColumnName="msr_unt_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="notes" msprop:Generator_ColumnVarNameInTable="columnnotes" msprop:Generator_ColumnPropNameInRow="notes" msprop:Generator_ColumnPropNameInTable="notesColumn" msprop:Generator_UserColumnName="notes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="supp_name" msprop:Generator_ColumnVarNameInTable="columnsupp_name" msprop:Generator_ColumnPropNameInRow="supp_name" msprop:Generator_ColumnPropNameInTable="supp_nameColumn" msprop:Generator_UserColumnName="supp_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cat_name" msprop:Generator_ColumnVarNameInTable="columncat_name" msprop:Generator_ColumnPropNameInRow="cat_name" msprop:Generator_ColumnPropNameInTable="cat_nameColumn" msprop:Generator_UserColumnName="cat_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:v_get_products_with_details" />
+      <xs:field xpath="mstns:unit_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
