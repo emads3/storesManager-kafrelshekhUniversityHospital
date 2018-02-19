@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Data;
+using System.Data.Sql;
+using System.Data.SqlClient;
 
 namespace Emad_Store.Controllers
 {
@@ -15,12 +17,12 @@ namespace Emad_Store.Controllers
 		Models.DataAcessLayer dal = new Models.DataAcessLayer();
 
 
-		public DataTable getProductsAboutToFinish(bool includeFinished = false)
+		public SqlDataAdapter getLstProductsAboutToFinish(bool includeFinished = false)
 		{
 			string query = "select * from v_get_products_with_details where stock_quantity <= alert_quantity"; // including finished products
 			if (!includeFinished)
 				query += " and stock_quantity != 0";
-			return dal.selectData(query);
+			return dal.selectDataAdapter(query);
 		}
 
 

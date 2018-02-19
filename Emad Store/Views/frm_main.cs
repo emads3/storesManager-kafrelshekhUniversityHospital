@@ -65,10 +65,7 @@ namespace Emad_Store.Views
 			tmr.Interval = 1000;
 			tmr.Tick += tmr_Tick;
 			tmr.Enabled = true;
-
-
-
-
+			
 		}
 
 		void tmr_Tick(object sender, EventArgs e)
@@ -147,6 +144,22 @@ namespace Emad_Store.Views
 		private void rptProductsAboutToFinishToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			
+			dbSchemaAsDataSet ds = new dbSchemaAsDataSet();// object of the database schema typical as the source of the report
+			SqlDataAdapter da;// dataadapter used to fill the dataset
+			Reports.rpt_productsAboutToFinish r = new Reports.rpt_productsAboutToFinish();	// object of the report
+			Reports.frm_crRpt f = new Reports.frm_crRpt();// object of the report viewer form
+
+			if (MessageBox.Show("هل تريد ارفاق المنتجات المنتهية من المخزن ضمن التقرير ؟", "ارفاق المنتجات المنتهية ايضا", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+				da = _reportsAndInfo.getLstProductsAboutToFinish(true);
+			else
+				da = _reportsAndInfo.getLstProductsAboutToFinish();
+
+			
+			da.Fill(ds, "v_get_products_with_details");
+			r.Refresh();
+			r.SetDataSource(ds);
+			f.crystalReportViewer1.ReportSource = r;
+			f.Show();
 		}
 		
 	}
