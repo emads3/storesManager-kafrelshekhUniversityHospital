@@ -264,7 +264,7 @@
 			this.btnCancelAddProductForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.btnCancelAddProductForm.Name = "btnCancelAddProductForm";
 			this.btnCancelAddProductForm.Size = new System.Drawing.Size(87, 37);
-			this.btnCancelAddProductForm.TabIndex = 3;
+			this.btnCancelAddProductForm.TabIndex = 1;
 			this.btnCancelAddProductForm.Text = "الغاء";
 			this.btnCancelAddProductForm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.btnCancelAddProductForm.UseVisualStyleBackColor = true;
@@ -277,7 +277,7 @@
 			this.btnAddProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.btnAddProduct.Name = "btnAddProduct";
 			this.btnAddProduct.Size = new System.Drawing.Size(127, 37);
-			this.btnAddProduct.TabIndex = 8;
+			this.btnAddProduct.TabIndex = 0;
 			this.btnAddProduct.Text = "اضافة";
 			this.btnAddProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.btnAddProduct.UseVisualStyleBackColor = true;
