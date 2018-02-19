@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Emad_Store.Reports {
+namespace Emad_Store.Reports.stockStatusReports {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace Emad_Store.Reports {
         
         public override string FullResourceName {
             get {
-                return "Emad_Store.Reports.rpt_productsAboutToFinish.rpt";
+                return "Emad_Store.Reports.stockStatusReports.rpt_productsAboutToFinish.rpt";
             }
             set {
                 // Do nothing

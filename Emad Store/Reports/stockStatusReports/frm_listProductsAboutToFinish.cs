@@ -68,7 +68,7 @@ namespace Emad_Store.Reports
 		{
 			dbSchemaAsDataSet ds = new dbSchemaAsDataSet();// object of the database schema typical as the source of the report
 			SqlDataAdapter da = new SqlDataAdapter();// dataadapter used to fill the dataset
-			Reports.rpt_productsAboutToFinish r = new Reports.rpt_productsAboutToFinish();  // object of the report
+			stockStatusReports.rpt_productsAboutToFinish r = new stockStatusReports.rpt_productsAboutToFinish();  // object of the report
 			Reports.frm_crRpt f = new Reports.frm_crRpt();// object of the report viewer form
 
 			if (fState == formState.productsAboutToFinish)
