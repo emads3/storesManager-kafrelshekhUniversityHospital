@@ -27,9 +27,9 @@ namespace Emad_Store.Controllers
 
 
 		// out of stock products "stock_quantity = 0" used in reports
-		public DataTable getOutOfStockProducts()
+		public SqlDataAdapter getLstOutOfStockProducts()
 		{
-			return dal.selectData("select * from v_get_products_with_details where stock_quantity = 0");
+			return dal.selectDataAdapter("select * from v_get_products_with_details where stock_quantity = 0");
 		}
 
 

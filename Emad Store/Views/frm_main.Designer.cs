@@ -30,13 +30,6 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_main));
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.دخولToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.تسجيلالخروجToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-			this.backUpDbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.restoreDbBackupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.dbSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.addNewProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.productsMngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,6 +66,13 @@
 			this.textBox9 = new System.Windows.Forms.TextBox();
 			this.textBox10 = new System.Windows.Forms.TextBox();
 			this.label10 = new System.Windows.Forms.Label();
+			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.دخولToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.تسجيلالخروجToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+			this.backUpDbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.restoreDbBackupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.dbSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
@@ -91,62 +91,6 @@
 			this.menuStrip1.Size = new System.Drawing.Size(830, 24);
 			this.menuStrip1.TabIndex = 1;
 			this.menuStrip1.Text = "menuStrip1";
-			// 
-			// fileToolStripMenuItem
-			// 
-			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.دخولToolStripMenuItem,
-            this.تسجيلالخروجToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.backUpDbToolStripMenuItem,
-            this.restoreDbBackupToolStripMenuItem,
-            this.dbSettingsToolStripMenuItem});
-			this.fileToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Display_16x16;
-			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-			this.fileToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-			this.fileToolStripMenuItem.Text = "ملف";
-			// 
-			// دخولToolStripMenuItem
-			// 
-			this.دخولToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Unlock;
-			this.دخولToolStripMenuItem.Name = "دخولToolStripMenuItem";
-			this.دخولToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-			this.دخولToolStripMenuItem.Text = "دخول";
-			this.دخولToolStripMenuItem.Click += new System.EventHandler(this.دخولToolStripMenuItem_Click);
-			// 
-			// تسجيلالخروجToolStripMenuItem
-			// 
-			this.تسجيلالخروجToolStripMenuItem.Enabled = false;
-			this.تسجيلالخروجToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Lock;
-			this.تسجيلالخروجToolStripMenuItem.Name = "تسجيلالخروجToolStripMenuItem";
-			this.تسجيلالخروجToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-			this.تسجيلالخروجToolStripMenuItem.Text = "تسجيل الخروج";
-			// 
-			// toolStripMenuItem1
-			// 
-			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-			this.toolStripMenuItem1.Size = new System.Drawing.Size(258, 6);
-			// 
-			// backUpDbToolStripMenuItem
-			// 
-			this.backUpDbToolStripMenuItem.Name = "backUpDbToolStripMenuItem";
-			this.backUpDbToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-			this.backUpDbToolStripMenuItem.Text = "نسخة احتياطية لقاعدة البيانات";
-			this.backUpDbToolStripMenuItem.Click += new System.EventHandler(this.backUpDbToolStripMenuItem_Click);
-			// 
-			// restoreDbBackupToolStripMenuItem
-			// 
-			this.restoreDbBackupToolStripMenuItem.Enabled = false;
-			this.restoreDbBackupToolStripMenuItem.Name = "restoreDbBackupToolStripMenuItem";
-			this.restoreDbBackupToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-			this.restoreDbBackupToolStripMenuItem.Text = "استعادة نسخة احتياطية لقاعدة البيانات";
-			// 
-			// dbSettingsToolStripMenuItem
-			// 
-			this.dbSettingsToolStripMenuItem.Name = "dbSettingsToolStripMenuItem";
-			this.dbSettingsToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-			this.dbSettingsToolStripMenuItem.Text = "اعدادات قاعدة البيانات";
-			this.dbSettingsToolStripMenuItem.Click += new System.EventHandler(this.dbSettingsToolStripMenuItem_Click);
 			// 
 			// productsToolStripMenuItem
 			// 
@@ -260,6 +204,7 @@
 			this.outOfStockProductsReportToolStripMenuItem.Name = "outOfStockProductsReportToolStripMenuItem";
 			this.outOfStockProductsReportToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
 			this.outOfStockProductsReportToolStripMenuItem.Text = "الادوية و المنتجات المنتهية من المخزن";
+			this.outOfStockProductsReportToolStripMenuItem.Click += new System.EventHandler(this.outOfStockProductsReportToolStripMenuItem_Click);
 			// 
 			// معدلاتالسحبلكلقسمToolStripMenuItem
 			// 
@@ -465,6 +410,62 @@
 			this.label10.Size = new System.Drawing.Size(104, 13);
 			this.label10.TabIndex = 9;
 			this.label10.Text = "عدد الفواتير المسجلة :";
+			// 
+			// fileToolStripMenuItem
+			// 
+			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.دخولToolStripMenuItem,
+            this.تسجيلالخروجToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.backUpDbToolStripMenuItem,
+            this.restoreDbBackupToolStripMenuItem,
+            this.dbSettingsToolStripMenuItem});
+			this.fileToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Display_16x16;
+			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+			this.fileToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+			this.fileToolStripMenuItem.Text = "ملف";
+			// 
+			// دخولToolStripMenuItem
+			// 
+			this.دخولToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Unlock;
+			this.دخولToolStripMenuItem.Name = "دخولToolStripMenuItem";
+			this.دخولToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.دخولToolStripMenuItem.Text = "دخول";
+			this.دخولToolStripMenuItem.Click += new System.EventHandler(this.دخولToolStripMenuItem_Click);
+			// 
+			// تسجيلالخروجToolStripMenuItem
+			// 
+			this.تسجيلالخروجToolStripMenuItem.Enabled = false;
+			this.تسجيلالخروجToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Lock;
+			this.تسجيلالخروجToolStripMenuItem.Name = "تسجيلالخروجToolStripMenuItem";
+			this.تسجيلالخروجToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.تسجيلالخروجToolStripMenuItem.Text = "تسجيل الخروج";
+			// 
+			// toolStripMenuItem1
+			// 
+			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+			this.toolStripMenuItem1.Size = new System.Drawing.Size(258, 6);
+			// 
+			// backUpDbToolStripMenuItem
+			// 
+			this.backUpDbToolStripMenuItem.Name = "backUpDbToolStripMenuItem";
+			this.backUpDbToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.backUpDbToolStripMenuItem.Text = "نسخة احتياطية لقاعدة البيانات";
+			this.backUpDbToolStripMenuItem.Click += new System.EventHandler(this.backUpDbToolStripMenuItem_Click);
+			// 
+			// restoreDbBackupToolStripMenuItem
+			// 
+			this.restoreDbBackupToolStripMenuItem.Enabled = false;
+			this.restoreDbBackupToolStripMenuItem.Name = "restoreDbBackupToolStripMenuItem";
+			this.restoreDbBackupToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.restoreDbBackupToolStripMenuItem.Text = "استعادة نسخة احتياطية لقاعدة البيانات";
+			// 
+			// dbSettingsToolStripMenuItem
+			// 
+			this.dbSettingsToolStripMenuItem.Name = "dbSettingsToolStripMenuItem";
+			this.dbSettingsToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.dbSettingsToolStripMenuItem.Text = "اعدادات قاعدة البيانات";
+			this.dbSettingsToolStripMenuItem.Click += new System.EventHandler(this.dbSettingsToolStripMenuItem_Click);
 			// 
 			// frm_main
 			// 

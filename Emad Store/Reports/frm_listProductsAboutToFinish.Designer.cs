@@ -32,7 +32,7 @@
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.btnPrintList = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
+			this.lblListRowsCount = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -72,21 +72,21 @@
 			this.label1.TabIndex = 2;
 			this.label1.Text = "اجمالي عدد المنتجات التي قاربت علي الانتهاء:";
 			// 
-			// label2
+			// lblListRowsCount
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(728, 282);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(16, 16);
-			this.label2.TabIndex = 3;
-			this.label2.Text = "..";
+			this.lblListRowsCount.AutoSize = true;
+			this.lblListRowsCount.Location = new System.Drawing.Point(728, 282);
+			this.lblListRowsCount.Name = "lblListRowsCount";
+			this.lblListRowsCount.Size = new System.Drawing.Size(16, 16);
+			this.lblListRowsCount.TabIndex = 3;
+			this.lblListRowsCount.Text = "..";
 			// 
 			// frm_listProductsAboutToFinish
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(815, 314);
-			this.Controls.Add(this.label2);
+			this.Controls.Add(this.lblListRowsCount);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.btnPrintList);
 			this.Controls.Add(this.dataGridView1);
@@ -110,6 +110,6 @@
 		private System.Windows.Forms.Button btnPrintList;
 		private System.Windows.Forms.Label label1;
 		public System.Windows.Forms.DataGridView dataGridView1;
-		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label lblListRowsCount;
 	}
 }

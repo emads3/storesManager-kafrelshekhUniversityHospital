@@ -142,9 +142,12 @@ namespace Emad_Store.Views
 
 		private void rptProductsAboutToFinishToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			Reports.frm_listProductsAboutToFinish fLst = new Reports.frm_listProductsAboutToFinish();
-			fLst.Show();
+			new Reports.frm_listProductsAboutToFinish(1).Show();
 		}
-		
+
+		private void outOfStockProductsReportToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			new Reports.frm_listProductsAboutToFinish(2).Show();
+		}
 	}
 }
