@@ -137,7 +137,6 @@ namespace Emad_Store.Views
 
 			Controllers.CLS_Settings settingsObj = new Controllers.CLS_Settings();
 			MessageBox.Show(Convert.ToString(settingsObj.backUpDB(bkupPath)));
-
 		}
 
 		private void dbSettingsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -147,68 +146,8 @@ namespace Emad_Store.Views
 
 		private void rptProductsAboutToFinishToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			Models.DataAcessLayer dal = new Models.DataAcessLayer();
-			SqlDataAdapter da = dal.selectDataAdapter("select * from v_get_products_with_details where stock_quantity <= alert_quantity");
-			//Reports.DataSet1 ds = new Reports.DataSet1();
-			dbSchemaAsDataSet ds = new dbSchemaAsDataSet();
-			da.Fill(ds, "v_get_products_with_details");
-			Reports.deleteThisReport r = new Reports.deleteThisReport();
-			r.Refresh();
-			r.SetDataSource(ds);
-			Reports.frm_crRpt f = new Reports.frm_crRpt();
-			f.crystalReportViewer1.ReportSource = r;
-			f.Show();
+			
 		}
-
-		private void button1_Click(object sender, EventArgs e)
-		{
-
-			// fill the dataset, bind the Report1.rdlc to the form report viewer
-			// fill the dataset, lec 108
-			// bind the report to the report viewer
-			//https://stackoverflow.com/questions/9929336/dynamically-binding-report-to-reportviewer-component
-
-
-			//TODO : uncomment this
-			Views.frm_reports f = new Views.frm_reports();
-
-
-			Controllers.CLS_dbSettings _dbConnectionSettings = new Controllers.CLS_dbSettings();
-			SqlConnection sqlCon;
-			/* edited prepared one */
-			string[] dbServerInfo = _dbConnectionSettings.getDBserverInfo();
-			string dbServerName = dbServerInfo[0]; //"(LocalDB)\\MSSQLLocalDB";
-			string dbName = dbServerInfo[1]; //"C:\\Users\bolli\\documents\\visual studio 2015\\Projects\\Emad Store\\Emad Store\\kfs_hospital.mdf";
-			string authMode = dbServerInfo[2]; //"Windows";
-			string dbUsername = dbServerInfo[3]; //"temporary username";
-			string dbPasswd = dbServerInfo[4]; //"temp password";
-
-			f.crystalReportViewer1.RefreshReport();
-
-			//f.Show();
-
-
-		}
-
-		private void button2_Click(object sender, EventArgs e)
-		{
-
-			// instanciate on object of the crystal report (report for printing all products stored in db "stored proc called get all products")
-			Reports.rpt_singleCategoryProducts rptSingleCatProducts = new Reports.rpt_singleCategoryProducts();
-			// obj from the form of reports
-			Views.frm_reports reportsFrm = new Views.frm_reports();
-
-			// refresh the sub report
-			new Reports.rpt_all_products().Refresh();
-
-			// refresh the report in case if a change has made in the database
-			rptSingleCatProducts.Refresh();
-
-			rptSingleCatProducts.SetParameterValue("@cat_id", 1);
-
-			//bind the crystal report to the crystal report viewer on the reports form
-			reportsFrm.crystalReportViewer1.ReportSource = rptSingleCatProducts;
-			reportsFrm.ShowDialog();
-		}
+		
 	}
 }

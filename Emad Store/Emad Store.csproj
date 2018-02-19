@@ -110,12 +110,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Reports\deleteThisReport.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>deleteThisReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Reports\frm_crRpt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,10 +202,6 @@
       <DependentUpon>rpt_single_unit.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="Reports\deleteThisReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>deleteThisReport.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reports\frm_crRpt.resx">
       <DependentUpon>frm_crRpt.cs</DependentUpon>
     </EmbeddedResource>

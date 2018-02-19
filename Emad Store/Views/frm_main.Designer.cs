@@ -53,7 +53,6 @@
 			this.rptProductsAboutToFinishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.outOfStockProductsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.معدلاتالسحبلكلقسمToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.button1 = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.txtUsername = new System.Windows.Forms.TextBox();
 			this.txtTimeDate = new System.Windows.Forms.TextBox();
@@ -74,7 +73,6 @@
 			this.textBox9 = new System.Windows.Forms.TextBox();
 			this.textBox10 = new System.Windows.Forms.TextBox();
 			this.label10 = new System.Windows.Forms.Label();
-			this.button2 = new System.Windows.Forms.Button();
 			this.menuStrip1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
@@ -229,14 +227,14 @@
 			// stockOutToolStripMenuItem
 			// 
 			this.stockOutToolStripMenuItem.Name = "stockOutToolStripMenuItem";
-			this.stockOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.stockOutToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
 			this.stockOutToolStripMenuItem.Text = "صرف";
 			this.stockOutToolStripMenuItem.Click += new System.EventHandler(this.stockOutToolStripMenuItem_Click);
 			// 
 			// fillStockToolStripMenuItem
 			// 
 			this.fillStockToolStripMenuItem.Name = "fillStockToolStripMenuItem";
-			this.fillStockToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.fillStockToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
 			this.fillStockToolStripMenuItem.Text = "ايداع";
 			this.fillStockToolStripMenuItem.Click += new System.EventHandler(this.fillStockToolStripMenuItem_Click);
 			// 
@@ -268,16 +266,6 @@
 			this.معدلاتالسحبلكلقسمToolStripMenuItem.Name = "معدلاتالسحبلكلقسمToolStripMenuItem";
 			this.معدلاتالسحبلكلقسمToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
 			this.معدلاتالسحبلكلقسمToolStripMenuItem.Text = "معدلات السحب لكل قسم";
-			// 
-			// button1
-			// 
-			this.button1.Location = new System.Drawing.Point(324, 150);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 3;
-			this.button1.Text = "button1";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// label1
 			// 
@@ -478,25 +466,13 @@
 			this.label10.TabIndex = 9;
 			this.label10.Text = "عدد الفواتير المسجلة :";
 			// 
-			// button2
-			// 
-			this.button2.Location = new System.Drawing.Point(509, 146);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(75, 23);
-			this.button2.TabIndex = 18;
-			this.button2.Text = "button2";
-			this.button2.UseVisualStyleBackColor = true;
-			this.button2.Click += new System.EventHandler(this.button2_Click);
-			// 
 			// frm_main
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(830, 441);
-			this.Controls.Add(this.button2);
 			this.Controls.Add(this.groupBox2);
 			this.Controls.Add(this.groupBox1);
-			this.Controls.Add(this.button1);
 			this.Controls.Add(this.menuStrip1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -538,7 +514,6 @@
 		public System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
 		public System.Windows.Forms.ToolStripMenuItem اضافةمستخدمجديدToolStripMenuItem;
 		public System.Windows.Forms.ToolStripMenuItem ادارةالمستخدمينToolStripMenuItem;
-		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
@@ -567,6 +542,5 @@
 		public System.Windows.Forms.TextBox textBox8;
 		public System.Windows.Forms.TextBox textBox9;
 		public System.Windows.Forms.TextBox textBox10;
-		private System.Windows.Forms.Button button2;
 	}
 }
