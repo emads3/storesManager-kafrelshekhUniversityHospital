@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Emad_Store.Reports {
+namespace Emad_Store.Reports.inOutStockBills {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace Emad_Store.Reports {
         
         public override string FullResourceName {
             get {
-                return "Emad_Store.Reports.rpt_printSingleBill.rpt";
+                return "Emad_Store.Reports.inOutStockBills.rpt_printSingleBill.rpt";
             }
             set {
                 // Do nothing
@@ -85,14 +85,6 @@ namespace Emad_Store.Reports {
         public CrystalDecisions.CrystalReports.Engine.Section Section5 {
             get {
                 return this.ReportDefinition.Sections[4];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_bill_id {
-            get {
-                return this.DataDefinition.ParameterFields[0];
             }
         }
     }

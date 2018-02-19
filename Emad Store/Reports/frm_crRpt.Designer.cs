@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_crRpt));
 			this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
 			this.SuspendLayout();
 			// 
@@ -41,6 +42,7 @@
 			this.crystalReportViewer1.Name = "crystalReportViewer1";
 			this.crystalReportViewer1.Size = new System.Drawing.Size(687, 438);
 			this.crystalReportViewer1.TabIndex = 0;
+			this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
 			// 
 			// frm_crRpt
 			// 
@@ -48,6 +50,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(687, 438);
 			this.Controls.Add(this.crystalReportViewer1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "frm_crRpt";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.RightToLeftLayout = true;

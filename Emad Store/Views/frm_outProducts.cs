@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * TODO :: add another button to the export groupbox to show the details of the bill in another form containg the a datagridView like the one in "stockStatusReports"
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +16,9 @@ using System.Windows.Forms;
 using CrystalDecisions.CrystalReports;
 using CrystalDecisions.Shared;
 using CrystalDecisions.CrystalReports.Engine;
+
+// used for sqlDataAdapter
+using System.Data.SqlClient;
 
 /*
  * TODO: later,,,
@@ -419,6 +426,21 @@ namespace Emad_Store.Views
 			if(formState == e_formStatus.outProducts)
 			{
 				Cursor = Cursors.WaitCursor;
+				dbSchemaAsDataSet ds = new Emad_Store.dbSchemaAsDataSet();// object of the database schema typical as the source of the report
+				SqlDataAdapter da = new SqlDataAdapter();// dataadapter used to fill the dataset
+				Reports.inOutStockBills.rpt_printSingleBill r = new Reports.inOutStockBills.rpt_printSingleBill();// object of the report
+
+				productsController.getBillReport(Convert.ToInt32(txtNewBillNum.Text)).Fill(ds, "sv_get_all_bills_with_units");
+				r.Refresh();
+				r.SetDataSource(ds);
+				Reports.frm_crRpt f = new Reports.frm_crRpt();// object of the report viewer form
+				f.crystalReportViewer1.ReportSource = r;
+				f.Show();
+				Cursor = Cursors.Default;
+
+
+				/*
+				Cursor = Cursors.WaitCursor;
 				// instanciate on object of the crystal report (report for printing all products stored in db "stored proc called get all products")
 				Reports.rpt_printSingleBill rptSingleBill = new Reports.rpt_printSingleBill();
 				// obj from the form of reports
@@ -436,11 +458,13 @@ namespace Emad_Store.Views
 				reportsFrm.crystalReportViewer1.ReportSource = rptSingleBill;
 				Cursor = Cursors.Default;
 				reportsFrm.ShowDialog();
+				*/
 			}
 		}
 
 		private void bntSaveBillAsExl_Click(object sender, EventArgs e)
 		{
+			/*
 			Cursor = Cursors.WaitCursor;
 			if (formState == e_formStatus.outProducts)
 			{
@@ -489,10 +513,12 @@ namespace Emad_Store.Views
 
 			}
 			Cursor = Cursors.Default;
+			*/
 		}
 
 		private void bntSaveBillAsPDF_Click(object sender, EventArgs e)
 		{
+			/*
 			if(formState == e_formStatus.outProducts)
 			{
 				try
@@ -539,6 +565,7 @@ namespace Emad_Store.Views
 					lblState.Text = "..";
 				}
 			}//end form sate out products
+			*/
 		}
 	}
 }

@@ -430,5 +430,15 @@ namespace Emad_Store.Controllers
 		#endregion bills
 
 
+		public SqlDataAdapter getBillReport(int billID)
+		{
+			SqlParameter[] storedProcParams = new SqlParameter[1];
+
+			storedProcParams[0] = new SqlParameter("@bill_id", SqlDbType.Int);
+			storedProcParams[0].Value = billID;
+
+			return dal.selectDataAdapter("sp_get_single_bill_with_units", storedProcParams);
+		}
+
 	} // end class
 } // end namespace

@@ -26,6 +26,8 @@ namespace Emad_Store {
         
         private v_get_products_with_detailsDataTable tablev_get_products_with_details;
         
+        private sv_get_all_bills_with_unitsDataTable tablesv_get_all_bills_with_units;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -57,6 +59,9 @@ namespace Emad_Store {
                 if ((ds.Tables["v_get_products_with_details"] != null)) {
                     base.Tables.Add(new v_get_products_with_detailsDataTable(ds.Tables["v_get_products_with_details"]));
                 }
+                if ((ds.Tables["sv_get_all_bills_with_units"] != null)) {
+                    base.Tables.Add(new sv_get_all_bills_with_unitsDataTable(ds.Tables["sv_get_all_bills_with_units"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -82,6 +87,16 @@ namespace Emad_Store {
         public v_get_products_with_detailsDataTable v_get_products_with_details {
             get {
                 return this.tablev_get_products_with_details;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public sv_get_all_bills_with_unitsDataTable sv_get_all_bills_with_units {
+            get {
+                return this.tablesv_get_all_bills_with_units;
             }
         }
         
@@ -155,6 +170,9 @@ namespace Emad_Store {
                 if ((ds.Tables["v_get_products_with_details"] != null)) {
                     base.Tables.Add(new v_get_products_with_detailsDataTable(ds.Tables["v_get_products_with_details"]));
                 }
+                if ((ds.Tables["sv_get_all_bills_with_units"] != null)) {
+                    base.Tables.Add(new sv_get_all_bills_with_unitsDataTable(ds.Tables["sv_get_all_bills_with_units"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -194,6 +212,12 @@ namespace Emad_Store {
                     this.tablev_get_products_with_details.InitVars();
                 }
             }
+            this.tablesv_get_all_bills_with_units = ((sv_get_all_bills_with_unitsDataTable)(base.Tables["sv_get_all_bills_with_units"]));
+            if ((initTable == true)) {
+                if ((this.tablesv_get_all_bills_with_units != null)) {
+                    this.tablesv_get_all_bills_with_units.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -206,11 +230,19 @@ namespace Emad_Store {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablev_get_products_with_details = new v_get_products_with_detailsDataTable();
             base.Tables.Add(this.tablev_get_products_with_details);
+            this.tablesv_get_all_bills_with_units = new sv_get_all_bills_with_unitsDataTable();
+            base.Tables.Add(this.tablesv_get_all_bills_with_units);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializev_get_products_with_details() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializesv_get_all_bills_with_units() {
             return false;
         }
         
@@ -271,6 +303,9 @@ namespace Emad_Store {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void v_get_products_with_detailsRowChangeEventHandler(object sender, v_get_products_with_detailsRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void sv_get_all_bills_with_unitsRowChangeEventHandler(object sender, sv_get_all_bills_with_unitsRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -635,6 +670,386 @@ namespace Emad_Store {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class sv_get_all_bills_with_unitsDataTable : global::System.Data.TypedTableBase<sv_get_all_bills_with_unitsRow> {
+            
+            private global::System.Data.DataColumn columnunit_name;
+            
+            private global::System.Data.DataColumn columnstock_quantity;
+            
+            private global::System.Data.DataColumn columntrans_id;
+            
+            private global::System.Data.DataColumn columnreceiver_name;
+            
+            private global::System.Data.DataColumn columntrans_time;
+            
+            private global::System.Data.DataColumn columnnotes;
+            
+            private global::System.Data.DataColumn columnfull_name;
+            
+            private global::System.Data.DataColumn columnphone_num;
+            
+            private global::System.Data.DataColumn columndept_name;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public sv_get_all_bills_with_unitsDataTable() {
+                this.TableName = "sv_get_all_bills_with_units";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal sv_get_all_bills_with_unitsDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected sv_get_all_bills_with_unitsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn unit_nameColumn {
+                get {
+                    return this.columnunit_name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn stock_quantityColumn {
+                get {
+                    return this.columnstock_quantity;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn trans_idColumn {
+                get {
+                    return this.columntrans_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn receiver_nameColumn {
+                get {
+                    return this.columnreceiver_name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn trans_timeColumn {
+                get {
+                    return this.columntrans_time;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn notesColumn {
+                get {
+                    return this.columnnotes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn full_nameColumn {
+                get {
+                    return this.columnfull_name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn phone_numColumn {
+                get {
+                    return this.columnphone_num;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn dept_nameColumn {
+                get {
+                    return this.columndept_name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public sv_get_all_bills_with_unitsRow this[int index] {
+                get {
+                    return ((sv_get_all_bills_with_unitsRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event sv_get_all_bills_with_unitsRowChangeEventHandler sv_get_all_bills_with_unitsRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event sv_get_all_bills_with_unitsRowChangeEventHandler sv_get_all_bills_with_unitsRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event sv_get_all_bills_with_unitsRowChangeEventHandler sv_get_all_bills_with_unitsRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event sv_get_all_bills_with_unitsRowChangeEventHandler sv_get_all_bills_with_unitsRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Addsv_get_all_bills_with_unitsRow(sv_get_all_bills_with_unitsRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public sv_get_all_bills_with_unitsRow Addsv_get_all_bills_with_unitsRow(string unit_name, string stock_quantity, int trans_id, string receiver_name, System.DateTime trans_time, string notes, string full_name, string phone_num, string dept_name) {
+                sv_get_all_bills_with_unitsRow rowsv_get_all_bills_with_unitsRow = ((sv_get_all_bills_with_unitsRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        unit_name,
+                        stock_quantity,
+                        trans_id,
+                        receiver_name,
+                        trans_time,
+                        notes,
+                        full_name,
+                        phone_num,
+                        dept_name};
+                rowsv_get_all_bills_with_unitsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowsv_get_all_bills_with_unitsRow);
+                return rowsv_get_all_bills_with_unitsRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public sv_get_all_bills_with_unitsRow FindBytrans_id(int trans_id) {
+                return ((sv_get_all_bills_with_unitsRow)(this.Rows.Find(new object[] {
+                            trans_id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                sv_get_all_bills_with_unitsDataTable cln = ((sv_get_all_bills_with_unitsDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new sv_get_all_bills_with_unitsDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnunit_name = base.Columns["unit_name"];
+                this.columnstock_quantity = base.Columns["stock_quantity"];
+                this.columntrans_id = base.Columns["trans_id"];
+                this.columnreceiver_name = base.Columns["receiver_name"];
+                this.columntrans_time = base.Columns["trans_time"];
+                this.columnnotes = base.Columns["notes"];
+                this.columnfull_name = base.Columns["full_name"];
+                this.columnphone_num = base.Columns["phone_num"];
+                this.columndept_name = base.Columns["dept_name"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnunit_name = new global::System.Data.DataColumn("unit_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnunit_name);
+                this.columnstock_quantity = new global::System.Data.DataColumn("stock_quantity", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstock_quantity);
+                this.columntrans_id = new global::System.Data.DataColumn("trans_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntrans_id);
+                this.columnreceiver_name = new global::System.Data.DataColumn("receiver_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnreceiver_name);
+                this.columntrans_time = new global::System.Data.DataColumn("trans_time", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntrans_time);
+                this.columnnotes = new global::System.Data.DataColumn("notes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnotes);
+                this.columnfull_name = new global::System.Data.DataColumn("full_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfull_name);
+                this.columnphone_num = new global::System.Data.DataColumn("phone_num", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnphone_num);
+                this.columndept_name = new global::System.Data.DataColumn("dept_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndept_name);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columntrans_id}, true));
+                this.columnunit_name.MaxLength = 200;
+                this.columnstock_quantity.ReadOnly = true;
+                this.columnstock_quantity.MaxLength = 131;
+                this.columntrans_id.AllowDBNull = false;
+                this.columntrans_id.Unique = true;
+                this.columnreceiver_name.MaxLength = 100;
+                this.columntrans_time.AllowDBNull = false;
+                this.columnnotes.MaxLength = 200;
+                this.columnfull_name.MaxLength = 100;
+                this.columnphone_num.MaxLength = 15;
+                this.columndept_name.AllowDBNull = false;
+                this.columndept_name.MaxLength = 100;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public sv_get_all_bills_with_unitsRow Newsv_get_all_bills_with_unitsRow() {
+                return ((sv_get_all_bills_with_unitsRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new sv_get_all_bills_with_unitsRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(sv_get_all_bills_with_unitsRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.sv_get_all_bills_with_unitsRowChanged != null)) {
+                    this.sv_get_all_bills_with_unitsRowChanged(this, new sv_get_all_bills_with_unitsRowChangeEvent(((sv_get_all_bills_with_unitsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.sv_get_all_bills_with_unitsRowChanging != null)) {
+                    this.sv_get_all_bills_with_unitsRowChanging(this, new sv_get_all_bills_with_unitsRowChangeEvent(((sv_get_all_bills_with_unitsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.sv_get_all_bills_with_unitsRowDeleted != null)) {
+                    this.sv_get_all_bills_with_unitsRowDeleted(this, new sv_get_all_bills_with_unitsRowChangeEvent(((sv_get_all_bills_with_unitsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.sv_get_all_bills_with_unitsRowDeleting != null)) {
+                    this.sv_get_all_bills_with_unitsRowDeleting(this, new sv_get_all_bills_with_unitsRowChangeEvent(((sv_get_all_bills_with_unitsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Removesv_get_all_bills_with_unitsRow(sv_get_all_bills_with_unitsRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dbSchemaAsDataSet ds = new dbSchemaAsDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "sv_get_all_bills_with_unitsDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class v_get_products_with_detailsRow : global::System.Data.DataRow {
@@ -845,6 +1260,227 @@ namespace Emad_Store {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class sv_get_all_bills_with_unitsRow : global::System.Data.DataRow {
+            
+            private sv_get_all_bills_with_unitsDataTable tablesv_get_all_bills_with_units;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal sv_get_all_bills_with_unitsRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablesv_get_all_bills_with_units = ((sv_get_all_bills_with_unitsDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string unit_name {
+                get {
+                    try {
+                        return ((string)(this[this.tablesv_get_all_bills_with_units.unit_nameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'unit_name\' in table \'sv_get_all_bills_with_units\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tablesv_get_all_bills_with_units.unit_nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string stock_quantity {
+                get {
+                    try {
+                        return ((string)(this[this.tablesv_get_all_bills_with_units.stock_quantityColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'stock_quantity\' in table \'sv_get_all_bills_with_units\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesv_get_all_bills_with_units.stock_quantityColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int trans_id {
+                get {
+                    return ((int)(this[this.tablesv_get_all_bills_with_units.trans_idColumn]));
+                }
+                set {
+                    this[this.tablesv_get_all_bills_with_units.trans_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string receiver_name {
+                get {
+                    try {
+                        return ((string)(this[this.tablesv_get_all_bills_with_units.receiver_nameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'receiver_name\' in table \'sv_get_all_bills_with_units\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tablesv_get_all_bills_with_units.receiver_nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime trans_time {
+                get {
+                    return ((global::System.DateTime)(this[this.tablesv_get_all_bills_with_units.trans_timeColumn]));
+                }
+                set {
+                    this[this.tablesv_get_all_bills_with_units.trans_timeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string notes {
+                get {
+                    try {
+                        return ((string)(this[this.tablesv_get_all_bills_with_units.notesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'notes\' in table \'sv_get_all_bills_with_units\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesv_get_all_bills_with_units.notesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string full_name {
+                get {
+                    try {
+                        return ((string)(this[this.tablesv_get_all_bills_with_units.full_nameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'full_name\' in table \'sv_get_all_bills_with_units\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tablesv_get_all_bills_with_units.full_nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string phone_num {
+                get {
+                    try {
+                        return ((string)(this[this.tablesv_get_all_bills_with_units.phone_numColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'phone_num\' in table \'sv_get_all_bills_with_units\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tablesv_get_all_bills_with_units.phone_numColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string dept_name {
+                get {
+                    return ((string)(this[this.tablesv_get_all_bills_with_units.dept_nameColumn]));
+                }
+                set {
+                    this[this.tablesv_get_all_bills_with_units.dept_nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isunit_nameNull() {
+                return this.IsNull(this.tablesv_get_all_bills_with_units.unit_nameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setunit_nameNull() {
+                this[this.tablesv_get_all_bills_with_units.unit_nameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isstock_quantityNull() {
+                return this.IsNull(this.tablesv_get_all_bills_with_units.stock_quantityColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setstock_quantityNull() {
+                this[this.tablesv_get_all_bills_with_units.stock_quantityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isreceiver_nameNull() {
+                return this.IsNull(this.tablesv_get_all_bills_with_units.receiver_nameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setreceiver_nameNull() {
+                this[this.tablesv_get_all_bills_with_units.receiver_nameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsnotesNull() {
+                return this.IsNull(this.tablesv_get_all_bills_with_units.notesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetnotesNull() {
+                this[this.tablesv_get_all_bills_with_units.notesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isfull_nameNull() {
+                return this.IsNull(this.tablesv_get_all_bills_with_units.full_nameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setfull_nameNull() {
+                this[this.tablesv_get_all_bills_with_units.full_nameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isphone_numNull() {
+                return this.IsNull(this.tablesv_get_all_bills_with_units.phone_numColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setphone_numNull() {
+                this[this.tablesv_get_all_bills_with_units.phone_numColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -864,6 +1500,40 @@ namespace Emad_Store {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public v_get_products_with_detailsRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class sv_get_all_bills_with_unitsRowChangeEvent : global::System.EventArgs {
+            
+            private sv_get_all_bills_with_unitsRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public sv_get_all_bills_with_unitsRowChangeEvent(sv_get_all_bills_with_unitsRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public sv_get_all_bills_with_unitsRow Row {
                 get {
                     return this.eventRow;
                 }
