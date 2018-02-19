@@ -193,6 +193,6 @@ namespace Emad_Store.Views
 			pictureBox1.Image = null;
 			txtProductNotes.Text = "";
 		}
-
+		
 	} // end class form
 }

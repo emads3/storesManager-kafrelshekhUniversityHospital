@@ -66,6 +66,11 @@ namespace Emad_Store.Views
 			dgvProductsLst.Columns[0].Visible = false;
 			dgvProductsLst.Columns[8].Visible = false;
 
+			// categories comboBox
+			cmbFilterByCat.DataSource = productsController.getAllCategories();
+			cmbFilterByCat.DisplayMember = "cat_name";
+			cmbFilterByCat.ValueMember = "cat_id";
+
 		}
 
 		public void refreshProductsList()
@@ -92,6 +97,12 @@ namespace Emad_Store.Views
 		private void textBox1_KeyDown(object sender, KeyEventArgs e)
 		{
 			// useless
+			textBox1_TextChanged(sender, e);
+		}
+
+		private void cmbFilterByCat_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			//search by the combobox
 			textBox1_TextChanged(sender, e);
 		}
 
@@ -292,6 +303,6 @@ namespace Emad_Store.Views
 
 
 		}
-		
+
 	}
 }

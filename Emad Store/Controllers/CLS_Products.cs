@@ -117,8 +117,10 @@ namespace Emad_Store.Controllers
 			return false;
 		}
 
-		public DataTable searchProduct(string searchKeyword)
+		public DataTable searchProduct(string searchKeyword/*, int categoryID = -1*/)//additional param to send the category id
 		{
+			// TODO : make the search filter in the view not from the database
+			//https://stackoverflow.com/questions/18253624/searching-in-datagridview-and-filtering-it
 			SqlParameter[] param = new SqlParameter[] { new SqlParameter("@srch_word", SqlDbType.VarChar, 100) };
 			param[0].Value = searchKeyword;
 			return dal.selectData("serch_products", param);

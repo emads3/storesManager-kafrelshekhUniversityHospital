@@ -45,7 +45,7 @@
 			this.lblState = new System.Windows.Forms.Label();
 			this.productImg = new System.Windows.Forms.PictureBox();
 			this.label2 = new System.Windows.Forms.Label();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.cmbFilterByCat = new System.Windows.Forms.ComboBox();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvProductsLst)).BeginInit();
 			this.gbOperations.SuspendLayout();
@@ -244,21 +244,23 @@
 			this.label2.TabIndex = 7;
 			this.label2.Text = "اختيار تصنيف :";
 			// 
-			// comboBox1
+			// cmbFilterByCat
 			// 
-			this.comboBox1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(317, 70);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(292, 24);
-			this.comboBox1.TabIndex = 8;
+			this.cmbFilterByCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cmbFilterByCat.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+			this.cmbFilterByCat.FormattingEnabled = true;
+			this.cmbFilterByCat.Location = new System.Drawing.Point(317, 70);
+			this.cmbFilterByCat.Name = "cmbFilterByCat";
+			this.cmbFilterByCat.Size = new System.Drawing.Size(292, 24);
+			this.cmbFilterByCat.TabIndex = 8;
+			this.cmbFilterByCat.SelectedIndexChanged += new System.EventHandler(this.cmbFilterByCat_SelectedIndexChanged);
 			// 
 			// frm_mngProducts
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(970, 572);
-			this.Controls.Add(this.comboBox1);
+			this.Controls.Add(this.cmbFilterByCat);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.productImg);
 			this.Controls.Add(this.lblState);
@@ -299,7 +301,7 @@
 		private System.Windows.Forms.Button btnExprtExcel;
 		private System.Windows.Forms.Button bntExprtPDF;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.ComboBox cmbFilterByCat;
 		public System.Windows.Forms.GroupBox gbOperations;
 		public System.Windows.Forms.DataGridView dgvProductsLst;
 		public System.Windows.Forms.Label lblState;

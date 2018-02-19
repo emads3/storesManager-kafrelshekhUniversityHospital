@@ -93,7 +93,14 @@ namespace Emad_Store.Views
 			*/
 			//it was a singleton pattern but now not used
 			frm_mngProducts f = frm_mngProducts.get_frm_mngProductsUniqueInstance;
-			f.ShowDialog();
+			try
+			{
+				f.ShowDialog();
+			} catch
+			{
+				// nullreference exception might happen
+				//https://stackoverflow.com/questions/10938075/gridview-updatepanel-sorting-object-reference-not-set-to-an-instance-of-an-objec
+			}
 			//frm_mngProducts.get_frm_mngProductsUniqueInstance.ShowDialog();
 		}
 
