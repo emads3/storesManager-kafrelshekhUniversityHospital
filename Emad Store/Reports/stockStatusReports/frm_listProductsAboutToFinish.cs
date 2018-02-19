@@ -58,10 +58,22 @@ namespace Emad_Store.Reports
 
 			daForGridView.Fill(dt);
 			dataGridView1.DataSource = dt;
-			
 			lblListRowsCount.Text = dt.Rows.Count.ToString(); // count the list rows and bind it to the label that shows the nummber
 
-			dataGridView1.Columns[0].Visible = false; // hide the first column (id of the product)
+			// in case of the form is used to show  "v_get_products_with_details" from the dataset
+			// so make some modifications
+			if (fState == formState.outOfStockProducts || fState == formState.productsAboutToFinish)
+			{
+				dataGridView1.Columns[0].Visible = false; // hide the first column (id of the product)
+
+				// edit the columns captions, bcz it comes from the dataset in engish heasers
+				dt.Columns[1].ColumnName = "اسم المنتج - الدواء";
+				dt.Columns[2].ColumnName = "الكميلة الموجودة";
+				dt.Columns[6].ColumnName = "اسم المورد";
+				dt.Columns[7].Caption = "التصنيف";
+			}
+
+
 		}
 
 		private void btnPrintList_Click(object sender, EventArgs e)
