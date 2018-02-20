@@ -112,8 +112,19 @@ namespace Emad_Store.Views
 
 		private void frm_main_Load(object sender, EventArgs e)
 		{
-			frm_login frm = new frm_login();
-			frm.ShowDialog();
+			new frm_login().ShowDialog();
+
+			fillMainScreenInfo();
+		}
+
+		void fillMainScreenInfo()
+		{
+			// TODO :: add a condition to make this visible only for allowed users
+			Views.frm_main.getMainFormInstance.txtUsername.Text = Controllers.CLS_RuntimeInfo.getInstance.fullUserName;
+			Views.frm_main.getMainFormInstance.txtNumOfProductsOutOfStock.Text = _reportsAndInfo.getNumOfOutOfStockProducts();
+			Views.frm_main.getMainFormInstance.txtNumProductsAboutToFinish.Text = _reportsAndInfo.getNumOfProductsAboutToFinish();
+			Views.frm_main.getMainFormInstance.txtNumOfBills.Text = _reportsAndInfo.getNumOfRegisteredBills();
+			Views.frm_main.getMainFormInstance.txtNumOfProductsInStock.Text = _reportsAndInfo.getNumOfUnitsInStock();
 		}
 
 		private void stockOutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -160,6 +171,11 @@ namespace Emad_Store.Views
 		private void inStockProductsToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			new Reports.frm_listProductsAboutToFinish(3).Show();
+		}
+
+		private void lblRefresh_Click(object sender, EventArgs e)
+		{
+			fillMainScreenInfo();
 		}
 	}
 }

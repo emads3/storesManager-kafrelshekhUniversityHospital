@@ -30,6 +30,13 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_main));
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.دخولToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.تسجيلالخروجToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+			this.backUpDbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.restoreDbBackupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.dbSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.addNewProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.productsMngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,38 +51,26 @@
 			this.fillStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.التقاريرToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.rptProductsAboutToFinishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.inStockProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.outOfStockProductsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.معدلاتالسحبلكلقسمToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.label1 = new System.Windows.Forms.Label();
-			this.txtUsername = new System.Windows.Forms.TextBox();
-			this.txtTimeDate = new System.Windows.Forms.TextBox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.label3 = new System.Windows.Forms.Label();
-			this.txtNumOfProductsInStock = new System.Windows.Forms.TextBox();
-			this.label4 = new System.Windows.Forms.Label();
-			this.textBox5 = new System.Windows.Forms.TextBox();
-			this.label5 = new System.Windows.Forms.Label();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.lblRefresh = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.txtUsername = new System.Windows.Forms.TextBox();
 			this.label7 = new System.Windows.Forms.Label();
-			this.txtProductsAboutToFinish = new System.Windows.Forms.TextBox();
-			this.textBox8 = new System.Windows.Forms.TextBox();
-			this.label8 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.txtNumOfProductsInStock = new System.Windows.Forms.TextBox();
 			this.label9 = new System.Windows.Forms.Label();
-			this.textBox9 = new System.Windows.Forms.TextBox();
-			this.textBox10 = new System.Windows.Forms.TextBox();
+			this.txtTimeDate = new System.Windows.Forms.TextBox();
+			this.txtNumOfBills = new System.Windows.Forms.TextBox();
+			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.label10 = new System.Windows.Forms.Label();
-			this.inStockProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.دخولToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.تسجيلالخروجToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-			this.backUpDbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.restoreDbBackupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.dbSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.label3 = new System.Windows.Forms.Label();
+			this.txtNumProductsAboutToFinish = new System.Windows.Forms.RichTextBox();
+			this.txtNumOfProductsOutOfStock = new System.Windows.Forms.RichTextBox();
 			this.menuStrip1.SuspendLayout();
-			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -92,6 +87,62 @@
 			this.menuStrip1.Size = new System.Drawing.Size(830, 24);
 			this.menuStrip1.TabIndex = 1;
 			this.menuStrip1.Text = "menuStrip1";
+			// 
+			// fileToolStripMenuItem
+			// 
+			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.دخولToolStripMenuItem,
+            this.تسجيلالخروجToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.backUpDbToolStripMenuItem,
+            this.restoreDbBackupToolStripMenuItem,
+            this.dbSettingsToolStripMenuItem});
+			this.fileToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Display_16x16;
+			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+			this.fileToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+			this.fileToolStripMenuItem.Text = "ملف";
+			// 
+			// دخولToolStripMenuItem
+			// 
+			this.دخولToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Unlock;
+			this.دخولToolStripMenuItem.Name = "دخولToolStripMenuItem";
+			this.دخولToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.دخولToolStripMenuItem.Text = "دخول";
+			this.دخولToolStripMenuItem.Click += new System.EventHandler(this.دخولToolStripMenuItem_Click);
+			// 
+			// تسجيلالخروجToolStripMenuItem
+			// 
+			this.تسجيلالخروجToolStripMenuItem.Enabled = false;
+			this.تسجيلالخروجToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Lock;
+			this.تسجيلالخروجToolStripMenuItem.Name = "تسجيلالخروجToolStripMenuItem";
+			this.تسجيلالخروجToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.تسجيلالخروجToolStripMenuItem.Text = "تسجيل الخروج";
+			// 
+			// toolStripMenuItem1
+			// 
+			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+			this.toolStripMenuItem1.Size = new System.Drawing.Size(258, 6);
+			// 
+			// backUpDbToolStripMenuItem
+			// 
+			this.backUpDbToolStripMenuItem.Name = "backUpDbToolStripMenuItem";
+			this.backUpDbToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.backUpDbToolStripMenuItem.Text = "نسخة احتياطية لقاعدة البيانات";
+			this.backUpDbToolStripMenuItem.Click += new System.EventHandler(this.backUpDbToolStripMenuItem_Click);
+			// 
+			// restoreDbBackupToolStripMenuItem
+			// 
+			this.restoreDbBackupToolStripMenuItem.Enabled = false;
+			this.restoreDbBackupToolStripMenuItem.Name = "restoreDbBackupToolStripMenuItem";
+			this.restoreDbBackupToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.restoreDbBackupToolStripMenuItem.Text = "استعادة نسخة احتياطية لقاعدة البيانات";
+			// 
+			// dbSettingsToolStripMenuItem
+			// 
+			this.dbSettingsToolStripMenuItem.Name = "dbSettingsToolStripMenuItem";
+			this.dbSettingsToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.dbSettingsToolStripMenuItem.Text = "اعدادات قاعدة البيانات";
+			this.dbSettingsToolStripMenuItem.Click += new System.EventHandler(this.dbSettingsToolStripMenuItem_Click);
 			// 
 			// productsToolStripMenuItem
 			// 
@@ -173,7 +224,7 @@
 			// 
 			this.stockOutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("stockOutToolStripMenuItem.Image")));
 			this.stockOutToolStripMenuItem.Name = "stockOutToolStripMenuItem";
-			this.stockOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.stockOutToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
 			this.stockOutToolStripMenuItem.Text = "صرف";
 			this.stockOutToolStripMenuItem.Click += new System.EventHandler(this.stockOutToolStripMenuItem_Click);
 			// 
@@ -181,7 +232,7 @@
 			// 
 			this.fillStockToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("fillStockToolStripMenuItem.Image")));
 			this.fillStockToolStripMenuItem.Name = "fillStockToolStripMenuItem";
-			this.fillStockToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.fillStockToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
 			this.fillStockToolStripMenuItem.Text = "ايداع";
 			this.fillStockToolStripMenuItem.Click += new System.EventHandler(this.fillStockToolStripMenuItem_Click);
 			// 
@@ -203,6 +254,13 @@
 			this.rptProductsAboutToFinishToolStripMenuItem.Text = "منتجات قاربت علي الانتهاء";
 			this.rptProductsAboutToFinishToolStripMenuItem.Click += new System.EventHandler(this.rptProductsAboutToFinishToolStripMenuItem_Click);
 			// 
+			// inStockProductsToolStripMenuItem
+			// 
+			this.inStockProductsToolStripMenuItem.Name = "inStockProductsToolStripMenuItem";
+			this.inStockProductsToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+			this.inStockProductsToolStripMenuItem.Text = "جرد المنتجات الموجودة في المخزن";
+			this.inStockProductsToolStripMenuItem.Click += new System.EventHandler(this.inStockProductsToolStripMenuItem_Click);
+			// 
 			// outOfStockProductsReportToolStripMenuItem
 			// 
 			this.outOfStockProductsReportToolStripMenuItem.Name = "outOfStockProductsReportToolStripMenuItem";
@@ -217,267 +275,186 @@
 			this.معدلاتالسحبلكلقسمToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
 			this.معدلاتالسحبلكلقسمToolStripMenuItem.Text = "معدلات السحب لكل قسم";
 			// 
+			// groupBox2
+			// 
+			this.groupBox2.Controls.Add(this.txtNumOfProductsOutOfStock);
+			this.groupBox2.Controls.Add(this.txtNumProductsAboutToFinish);
+			this.groupBox2.Controls.Add(this.lblRefresh);
+			this.groupBox2.Controls.Add(this.label1);
+			this.groupBox2.Controls.Add(this.label4);
+			this.groupBox2.Controls.Add(this.txtUsername);
+			this.groupBox2.Controls.Add(this.label7);
+			this.groupBox2.Controls.Add(this.label2);
+			this.groupBox2.Controls.Add(this.txtNumOfProductsInStock);
+			this.groupBox2.Controls.Add(this.label9);
+			this.groupBox2.Controls.Add(this.txtTimeDate);
+			this.groupBox2.Controls.Add(this.txtNumOfBills);
+			this.groupBox2.Controls.Add(this.textBox3);
+			this.groupBox2.Controls.Add(this.label10);
+			this.groupBox2.Controls.Add(this.label3);
+			this.groupBox2.Font = new System.Drawing.Font("Tahoma", 9F);
+			this.groupBox2.Location = new System.Drawing.Point(0, 251);
+			this.groupBox2.Name = "groupBox2";
+			this.groupBox2.Size = new System.Drawing.Size(830, 190);
+			this.groupBox2.TabIndex = 16;
+			this.groupBox2.TabStop = false;
+			this.groupBox2.Text = "معلومات سريعة";
+			this.groupBox2.Visible = false;
+			// 
+			// lblRefresh
+			// 
+			this.lblRefresh.AutoSize = true;
+			this.lblRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.lblRefresh.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Underline);
+			this.lblRefresh.Location = new System.Drawing.Point(26, 167);
+			this.lblRefresh.Name = "lblRefresh";
+			this.lblRefresh.Size = new System.Drawing.Size(39, 14);
+			this.lblRefresh.TabIndex = 21;
+			this.lblRefresh.Text = "تحديث";
+			this.lblRefresh.Click += new System.EventHandler(this.lblRefresh_Click);
+			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(631, 38);
+			this.label1.Location = new System.Drawing.Point(552, 37);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(77, 13);
-			this.label1.TabIndex = 5;
+			this.label1.Size = new System.Drawing.Size(98, 14);
+			this.label1.TabIndex = 15;
 			this.label1.Text = " اسم المستخدم :";
-			// 
-			// txtUsername
-			// 
-			this.txtUsername.Location = new System.Drawing.Point(608, 68);
-			this.txtUsername.Name = "txtUsername";
-			this.txtUsername.ReadOnly = true;
-			this.txtUsername.Size = new System.Drawing.Size(100, 20);
-			this.txtUsername.TabIndex = 6;
-			this.txtUsername.Text = "...";
-			// 
-			// txtTimeDate
-			// 
-			this.txtTimeDate.Location = new System.Drawing.Point(479, 68);
-			this.txtTimeDate.Name = "txtTimeDate";
-			this.txtTimeDate.ReadOnly = true;
-			this.txtTimeDate.Size = new System.Drawing.Size(100, 20);
-			this.txtTimeDate.TabIndex = 8;
-			this.txtTimeDate.Text = "3 فبراير 2018";
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(493, 38);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(63, 13);
-			this.label2.TabIndex = 7;
-			this.label2.Text = "الساعة الان :";
-			// 
-			// textBox3
-			// 
-			this.textBox3.Location = new System.Drawing.Point(331, 68);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.ReadOnly = true;
-			this.textBox3.Size = new System.Drawing.Size(100, 20);
-			this.textBox3.TabIndex = 10;
-			this.textBox3.Text = "12 فاتورة";
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(342, 38);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(92, 13);
-			this.label3.TabIndex = 9;
-			this.label3.Text = "عدد فواتير الايداع :";
-			// 
-			// txtNumOfProductsInStock
-			// 
-			this.txtNumOfProductsInStock.Location = new System.Drawing.Point(187, 68);
-			this.txtNumOfProductsInStock.Name = "txtNumOfProductsInStock";
-			this.txtNumOfProductsInStock.ReadOnly = true;
-			this.txtNumOfProductsInStock.Size = new System.Drawing.Size(100, 20);
-			this.txtNumOfProductsInStock.TabIndex = 12;
 			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(183, 38);
+			this.label4.Location = new System.Drawing.Point(387, 109);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(117, 13);
-			this.label4.TabIndex = 11;
-			this.label4.Text = "عدد المنتجات في المخزن";
+			this.label4.Size = new System.Drawing.Size(174, 14);
+			this.label4.TabIndex = 13;
+			this.label4.Text = "عدد المنتجات المنتهية من المخزن";
 			// 
-			// textBox5
+			// txtUsername
 			// 
-			this.textBox5.Location = new System.Drawing.Point(48, 68);
-			this.textBox5.Name = "textBox5";
-			this.textBox5.ReadOnly = true;
-			this.textBox5.Size = new System.Drawing.Size(100, 20);
-			this.textBox5.TabIndex = 14;
-			this.textBox5.Text = "1000 فاتورة";
-			// 
-			// label5
-			// 
-			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(47, 38);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(104, 13);
-			this.label5.TabIndex = 13;
-			this.label5.Text = "عدد الفواتير المسجلة :";
-			// 
-			// groupBox1
-			// 
-			this.groupBox1.Controls.Add(this.textBox5);
-			this.groupBox1.Controls.Add(this.label5);
-			this.groupBox1.Controls.Add(this.label1);
-			this.groupBox1.Controls.Add(this.txtUsername);
-			this.groupBox1.Controls.Add(this.txtNumOfProductsInStock);
-			this.groupBox1.Controls.Add(this.label2);
-			this.groupBox1.Controls.Add(this.label4);
-			this.groupBox1.Controls.Add(this.txtTimeDate);
-			this.groupBox1.Controls.Add(this.textBox3);
-			this.groupBox1.Controls.Add(this.label3);
-			this.groupBox1.Location = new System.Drawing.Point(0, 244);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(830, 104);
-			this.groupBox1.TabIndex = 15;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "شوية معلومات ع السريع";
-			this.groupBox1.Visible = false;
-			// 
-			// groupBox2
-			// 
-			this.groupBox2.Controls.Add(this.label7);
-			this.groupBox2.Controls.Add(this.txtProductsAboutToFinish);
-			this.groupBox2.Controls.Add(this.textBox8);
-			this.groupBox2.Controls.Add(this.label8);
-			this.groupBox2.Controls.Add(this.label9);
-			this.groupBox2.Controls.Add(this.textBox9);
-			this.groupBox2.Controls.Add(this.textBox10);
-			this.groupBox2.Controls.Add(this.label10);
-			this.groupBox2.Location = new System.Drawing.Point(0, 344);
-			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(830, 97);
-			this.groupBox2.TabIndex = 16;
-			this.groupBox2.TabStop = false;
-			this.groupBox2.Text = "معلومات المنتجات :";
-			this.groupBox2.Visible = false;
+			this.txtUsername.Enabled = false;
+			this.txtUsername.Location = new System.Drawing.Point(493, 67);
+			this.txtUsername.Name = "txtUsername";
+			this.txtUsername.ReadOnly = true;
+			this.txtUsername.Size = new System.Drawing.Size(154, 22);
+			this.txtUsername.TabIndex = 16;
+			this.txtUsername.Text = "...";
 			// 
 			// label7
 			// 
 			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(558, 35);
+			this.label7.Location = new System.Drawing.Point(602, 109);
 			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(134, 13);
+			this.label7.Size = new System.Drawing.Size(177, 14);
 			this.label7.TabIndex = 5;
-			this.label7.Text = "منتجات قاربت علي الانتهاء :";
+			this.label7.Text = "عدد المنتجات قاربت علي الانتهاء :";
 			// 
-			// txtProductsAboutToFinish
+			// label2
 			// 
-			this.txtProductsAboutToFinish.Location = new System.Drawing.Point(568, 62);
-			this.txtProductsAboutToFinish.Name = "txtProductsAboutToFinish";
-			this.txtProductsAboutToFinish.ReadOnly = true;
-			this.txtProductsAboutToFinish.Size = new System.Drawing.Size(100, 20);
-			this.txtProductsAboutToFinish.TabIndex = 6;
-			this.txtProductsAboutToFinish.Text = "...";
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(382, 37);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(74, 14);
+			this.label2.TabIndex = 17;
+			this.label2.Text = "الساعة الان :";
 			// 
-			// textBox8
+			// txtNumOfProductsInStock
 			// 
-			this.textBox8.Location = new System.Drawing.Point(124, 62);
-			this.textBox8.Name = "textBox8";
-			this.textBox8.ReadOnly = true;
-			this.textBox8.Size = new System.Drawing.Size(100, 20);
-			this.textBox8.TabIndex = 12;
-			this.textBox8.Text = "6";
-			// 
-			// label8
-			// 
-			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(378, 35);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(163, 13);
-			this.label8.TabIndex = 7;
-			this.label8.Text = "عدد المنتجات التي تم صرفها اليوم :";
+			this.txtNumOfProductsInStock.Enabled = false;
+			this.txtNumOfProductsInStock.Location = new System.Drawing.Point(80, 136);
+			this.txtNumOfProductsInStock.Name = "txtNumOfProductsInStock";
+			this.txtNumOfProductsInStock.ReadOnly = true;
+			this.txtNumOfProductsInStock.Size = new System.Drawing.Size(100, 22);
+			this.txtNumOfProductsInStock.TabIndex = 12;
+			this.txtNumOfProductsInStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// label9
 			// 
 			this.label9.AutoSize = true;
-			this.label9.Location = new System.Drawing.Point(110, 35);
+			this.label9.Location = new System.Drawing.Point(66, 109);
 			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(117, 13);
+			this.label9.Size = new System.Drawing.Size(133, 14);
 			this.label9.TabIndex = 11;
 			this.label9.Text = "عدد المنتجات في المخزن";
 			// 
-			// textBox9
+			// txtTimeDate
 			// 
-			this.textBox9.Location = new System.Drawing.Point(406, 62);
-			this.textBox9.Name = "textBox9";
-			this.textBox9.ReadOnly = true;
-			this.textBox9.Size = new System.Drawing.Size(132, 20);
-			this.textBox9.TabIndex = 8;
-			this.textBox9.Text = "50 وحدة من 20 منتج";
+			this.txtTimeDate.Enabled = false;
+			this.txtTimeDate.Location = new System.Drawing.Point(318, 67);
+			this.txtTimeDate.Name = "txtTimeDate";
+			this.txtTimeDate.ReadOnly = true;
+			this.txtTimeDate.Size = new System.Drawing.Size(150, 22);
+			this.txtTimeDate.TabIndex = 18;
+			this.txtTimeDate.Text = "3 فبراير 2018";
 			// 
-			// textBox10
+			// txtNumOfBills
 			// 
-			this.textBox10.Location = new System.Drawing.Point(258, 62);
-			this.textBox10.Name = "textBox10";
-			this.textBox10.ReadOnly = true;
-			this.textBox10.Size = new System.Drawing.Size(100, 20);
-			this.textBox10.TabIndex = 10;
-			this.textBox10.Text = "23";
+			this.txtNumOfBills.Enabled = false;
+			this.txtNumOfBills.Location = new System.Drawing.Point(240, 136);
+			this.txtNumOfBills.Name = "txtNumOfBills";
+			this.txtNumOfBills.ReadOnly = true;
+			this.txtNumOfBills.Size = new System.Drawing.Size(100, 22);
+			this.txtNumOfBills.TabIndex = 10;
+			this.txtNumOfBills.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// textBox3
+			// 
+			this.textBox3.Enabled = false;
+			this.textBox3.Location = new System.Drawing.Point(176, 67);
+			this.textBox3.Name = "textBox3";
+			this.textBox3.ReadOnly = true;
+			this.textBox3.Size = new System.Drawing.Size(100, 22);
+			this.textBox3.TabIndex = 20;
+			this.textBox3.Text = "12 فاتورة";
 			// 
 			// label10
 			// 
 			this.label10.AutoSize = true;
-			this.label10.Location = new System.Drawing.Point(254, 35);
+			this.label10.Location = new System.Drawing.Point(236, 109);
 			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(104, 13);
+			this.label10.Size = new System.Drawing.Size(120, 14);
 			this.label10.TabIndex = 9;
 			this.label10.Text = "عدد الفواتير المسجلة :";
 			// 
-			// inStockProductsToolStripMenuItem
+			// label3
 			// 
-			this.inStockProductsToolStripMenuItem.Name = "inStockProductsToolStripMenuItem";
-			this.inStockProductsToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
-			this.inStockProductsToolStripMenuItem.Text = "جرد المنتجات الموجودة في المخزن";
-			this.inStockProductsToolStripMenuItem.Click += new System.EventHandler(this.inStockProductsToolStripMenuItem_Click);
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(181, 37);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(98, 14);
+			this.label3.TabIndex = 19;
+			this.label3.Text = "عدد فواتير الايداع :";
 			// 
-			// fileToolStripMenuItem
+			// txtNumProductsAboutToFinish
 			// 
-			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.دخولToolStripMenuItem,
-            this.تسجيلالخروجToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.backUpDbToolStripMenuItem,
-            this.restoreDbBackupToolStripMenuItem,
-            this.dbSettingsToolStripMenuItem});
-			this.fileToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Display_16x16;
-			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-			this.fileToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-			this.fileToolStripMenuItem.Text = "ملف";
+			this.txtNumProductsAboutToFinish.Enabled = false;
+			this.txtNumProductsAboutToFinish.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.txtNumProductsAboutToFinish.ForeColor = System.Drawing.Color.Red;
+			this.txtNumProductsAboutToFinish.Location = new System.Drawing.Point(637, 136);
+			this.txtNumProductsAboutToFinish.Multiline = false;
+			this.txtNumProductsAboutToFinish.Name = "txtNumProductsAboutToFinish";
+			this.txtNumProductsAboutToFinish.ReadOnly = true;
+			this.txtNumProductsAboutToFinish.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+			this.txtNumProductsAboutToFinish.ShortcutsEnabled = false;
+			this.txtNumProductsAboutToFinish.Size = new System.Drawing.Size(98, 21);
+			this.txtNumProductsAboutToFinish.TabIndex = 22;
+			this.txtNumProductsAboutToFinish.Text = "";
 			// 
-			// دخولToolStripMenuItem
+			// txtNumOfProductsOutOfStock
 			// 
-			this.دخولToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Unlock;
-			this.دخولToolStripMenuItem.Name = "دخولToolStripMenuItem";
-			this.دخولToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-			this.دخولToolStripMenuItem.Text = "دخول";
-			this.دخولToolStripMenuItem.Click += new System.EventHandler(this.دخولToolStripMenuItem_Click);
-			// 
-			// تسجيلالخروجToolStripMenuItem
-			// 
-			this.تسجيلالخروجToolStripMenuItem.Enabled = false;
-			this.تسجيلالخروجToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Lock;
-			this.تسجيلالخروجToolStripMenuItem.Name = "تسجيلالخروجToolStripMenuItem";
-			this.تسجيلالخروجToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-			this.تسجيلالخروجToolStripMenuItem.Text = "تسجيل الخروج";
-			// 
-			// toolStripMenuItem1
-			// 
-			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-			this.toolStripMenuItem1.Size = new System.Drawing.Size(258, 6);
-			// 
-			// backUpDbToolStripMenuItem
-			// 
-			this.backUpDbToolStripMenuItem.Name = "backUpDbToolStripMenuItem";
-			this.backUpDbToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-			this.backUpDbToolStripMenuItem.Text = "نسخة احتياطية لقاعدة البيانات";
-			this.backUpDbToolStripMenuItem.Click += new System.EventHandler(this.backUpDbToolStripMenuItem_Click);
-			// 
-			// restoreDbBackupToolStripMenuItem
-			// 
-			this.restoreDbBackupToolStripMenuItem.Enabled = false;
-			this.restoreDbBackupToolStripMenuItem.Name = "restoreDbBackupToolStripMenuItem";
-			this.restoreDbBackupToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-			this.restoreDbBackupToolStripMenuItem.Text = "استعادة نسخة احتياطية لقاعدة البيانات";
-			// 
-			// dbSettingsToolStripMenuItem
-			// 
-			this.dbSettingsToolStripMenuItem.Name = "dbSettingsToolStripMenuItem";
-			this.dbSettingsToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-			this.dbSettingsToolStripMenuItem.Text = "اعدادات قاعدة البيانات";
-			this.dbSettingsToolStripMenuItem.Click += new System.EventHandler(this.dbSettingsToolStripMenuItem_Click);
+			this.txtNumOfProductsOutOfStock.Enabled = false;
+			this.txtNumOfProductsOutOfStock.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.txtNumOfProductsOutOfStock.ForeColor = System.Drawing.Color.Red;
+			this.txtNumOfProductsOutOfStock.Location = new System.Drawing.Point(427, 136);
+			this.txtNumOfProductsOutOfStock.Multiline = false;
+			this.txtNumOfProductsOutOfStock.Name = "txtNumOfProductsOutOfStock";
+			this.txtNumOfProductsOutOfStock.ReadOnly = true;
+			this.txtNumOfProductsOutOfStock.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+			this.txtNumOfProductsOutOfStock.ShortcutsEnabled = false;
+			this.txtNumOfProductsOutOfStock.Size = new System.Drawing.Size(98, 21);
+			this.txtNumOfProductsOutOfStock.TabIndex = 23;
+			this.txtNumOfProductsOutOfStock.Text = "";
 			// 
 			// frm_main
 			// 
@@ -485,7 +462,6 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(830, 441);
 			this.Controls.Add(this.groupBox2);
-			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.menuStrip1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -501,8 +477,6 @@
 			this.Load += new System.EventHandler(this.frm_main_Load);
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
-			this.groupBox1.ResumeLayout(false);
-			this.groupBox1.PerformLayout();
 			this.groupBox2.ResumeLayout(false);
 			this.groupBox2.PerformLayout();
 			this.ResumeLayout(false);
@@ -528,34 +502,30 @@
 		public System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
 		public System.Windows.Forms.ToolStripMenuItem اضافةمستخدمجديدToolStripMenuItem;
 		public System.Windows.Forms.ToolStripMenuItem ادارةالمستخدمينToolStripMenuItem;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.ToolStripMenuItem المخزنToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem stockOutToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem fillStockToolStripMenuItem;
-		public System.Windows.Forms.TextBox txtUsername;
-		public System.Windows.Forms.GroupBox groupBox1;
 		public System.Windows.Forms.GroupBox groupBox2;
 		private System.Windows.Forms.ToolStripMenuItem التقاريرToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem dbSettingsToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem outOfStockProductsReportToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem rptProductsAboutToFinishToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem معدلاتالسحبلكلقسمToolStripMenuItem;
+		public System.Windows.Forms.TextBox txtNumOfProductsInStock;
+		public System.Windows.Forms.TextBox txtNumOfBills;
+		private System.Windows.Forms.ToolStripMenuItem inStockProductsToolStripMenuItem;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Label label1;
+		public System.Windows.Forms.TextBox txtUsername;
+		private System.Windows.Forms.Label label2;
 		public System.Windows.Forms.TextBox txtTimeDate;
 		public System.Windows.Forms.TextBox textBox3;
-		public System.Windows.Forms.TextBox txtNumOfProductsInStock;
-		public System.Windows.Forms.TextBox textBox5;
-		public System.Windows.Forms.TextBox txtProductsAboutToFinish;
-		public System.Windows.Forms.TextBox textBox8;
-		public System.Windows.Forms.TextBox textBox9;
-		public System.Windows.Forms.TextBox textBox10;
-		private System.Windows.Forms.ToolStripMenuItem inStockProductsToolStripMenuItem;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label lblRefresh;
+		private System.Windows.Forms.RichTextBox txtNumOfProductsOutOfStock;
+		private System.Windows.Forms.RichTextBox txtNumProductsAboutToFinish;
 	}
 }

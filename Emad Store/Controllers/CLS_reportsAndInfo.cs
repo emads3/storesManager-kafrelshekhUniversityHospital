@@ -26,7 +26,7 @@ namespace Emad_Store.Controllers
 		}
 
 
-		// out of stock products "stock_quantity = 0" used in reports
+		// list of out-of-stock products "stock_quantity = 0" used in reports
 		public SqlDataAdapter getLstOutOfStockProducts()
 		{
 			return dal.selectDataAdapter("select * from v_get_products_with_details where stock_quantity = 0");
@@ -47,10 +47,20 @@ namespace Emad_Store.Controllers
 			return dal.selectData("select count(unit_id) from units where stock_quantity > 0").Rows[0][0].ToString();
 		}
 
+		public string getNumOfOutOfStockProducts()
+		{
+			return dal.selectData("select count(unit_id) from units where stock_quantity = 0").Rows[0][0].ToString();
+		}
 		public string getNumOfProductsAboutToFinish()
 		{
-			return dal.selectData("select count(unit_id)from units where stock_quantity <= alert_quantity").Rows[0][0].ToString();
+			return dal.selectData("select count(unit_id) from units where stock_quantity <= alert_quantity and stock_quantity > 0").Rows[0][0].ToString();
 		}
+		public string getNumOfRegisteredBills()
+		{
+			return dal.selectData("select count(trans_id) from transactions").Rows[0][0].ToString();
+		}
+
+		
 
 
 

@@ -81,9 +81,7 @@ namespace Emad_Store.Controllers
 			Views.frm_main.getMainFormInstance.backUpDbToolStripMenuItem.Enabled = true;
 			Views.frm_main.getMainFormInstance.restoreDbBackupToolStripMenuItem.Enabled = true;
 
-			Views.frm_main.getMainFormInstance.groupBox1.Visible = true;
 			Views.frm_main.getMainFormInstance.groupBox2.Visible = true;
-			Views.frm_main.getMainFormInstance.groupBox1.Enabled = true;
 			Views.frm_main.getMainFormInstance.groupBox2.Enabled = true;
 
 			fillMainFormData();
@@ -95,18 +93,15 @@ namespace Emad_Store.Controllers
 		{
 			//set the info in the runtime class (userID)
 			// note that the application uses this static class' info during the runtime
-			Controllers.CLS_RuntimeInfo.getInstance.userID = userID;             /*	set the userID		*/
-			Controllers.CLS_RuntimeInfo.getInstance.fullUserName = loggedUser_fullName;       /*	set the userID		*/
+			Controllers.CLS_RuntimeInfo.getInstance.userID = userID;						/*	set the userID			*/
+			Controllers.CLS_RuntimeInfo.getInstance.fullUserName = loggedUser_fullName;		/*	set the user full name	*/
 		}
 
 
 
 		void fillMainFormData()
 		{
-			Views.frm_main.getMainFormInstance.txtUsername.Text = Controllers.CLS_RuntimeInfo.getInstance.fullUserName;
-			Views.frm_main.getMainFormInstance.txtNumOfProductsInStock.Text = Controllers.CLS_RuntimeInfo.getInstance.fullUserName;
-			Views.frm_main.getMainFormInstance.txtNumOfProductsInStock.Text = _reportsAndInfo.getNumOfUnitsInStock();
-			Views.frm_main.getMainFormInstance.txtProductsAboutToFinish.Text = _reportsAndInfo.getNumOfProductsAboutToFinish();
+			// make some usefull stuff here
 		}
 
 
