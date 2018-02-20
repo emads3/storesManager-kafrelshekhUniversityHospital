@@ -30,13 +30,6 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_main));
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.دخولToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.تسجيلالخروجToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-			this.backUpDbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.restoreDbBackupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.dbSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.addNewProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.productsMngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,8 +39,6 @@
 			this.اضافةمستخدمجديدToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.ادارةالمستخدمينToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.stockOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.fillStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.repotrsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.rptProductsAboutToFinishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.inStockProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,6 +67,15 @@
 			this.وحداتالقياسللادويةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.اضافةوحدةقياسجديدةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.ادارةوحداتالقياسالموجودةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.دخولToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.تسجيلالخروجToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+			this.backUpDbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.restoreDbBackupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.dbSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.stockOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.fillStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.SuspendLayout();
@@ -94,62 +94,6 @@
 			this.menuStrip1.Size = new System.Drawing.Size(830, 24);
 			this.menuStrip1.TabIndex = 1;
 			this.menuStrip1.Text = "menuStrip1";
-			// 
-			// fileToolStripMenuItem
-			// 
-			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.دخولToolStripMenuItem,
-            this.تسجيلالخروجToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.backUpDbToolStripMenuItem,
-            this.restoreDbBackupToolStripMenuItem,
-            this.dbSettingsToolStripMenuItem});
-			this.fileToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Display_16x16;
-			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-			this.fileToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-			this.fileToolStripMenuItem.Text = "ملف";
-			// 
-			// دخولToolStripMenuItem
-			// 
-			this.دخولToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Unlock;
-			this.دخولToolStripMenuItem.Name = "دخولToolStripMenuItem";
-			this.دخولToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-			this.دخولToolStripMenuItem.Text = "دخول";
-			this.دخولToolStripMenuItem.Click += new System.EventHandler(this.دخولToolStripMenuItem_Click);
-			// 
-			// تسجيلالخروجToolStripMenuItem
-			// 
-			this.تسجيلالخروجToolStripMenuItem.Enabled = false;
-			this.تسجيلالخروجToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Lock;
-			this.تسجيلالخروجToolStripMenuItem.Name = "تسجيلالخروجToolStripMenuItem";
-			this.تسجيلالخروجToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-			this.تسجيلالخروجToolStripMenuItem.Text = "تسجيل الخروج";
-			// 
-			// toolStripMenuItem1
-			// 
-			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-			this.toolStripMenuItem1.Size = new System.Drawing.Size(258, 6);
-			// 
-			// backUpDbToolStripMenuItem
-			// 
-			this.backUpDbToolStripMenuItem.Name = "backUpDbToolStripMenuItem";
-			this.backUpDbToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-			this.backUpDbToolStripMenuItem.Text = "نسخة احتياطية لقاعدة البيانات";
-			this.backUpDbToolStripMenuItem.Click += new System.EventHandler(this.backUpDbToolStripMenuItem_Click);
-			// 
-			// restoreDbBackupToolStripMenuItem
-			// 
-			this.restoreDbBackupToolStripMenuItem.Enabled = false;
-			this.restoreDbBackupToolStripMenuItem.Name = "restoreDbBackupToolStripMenuItem";
-			this.restoreDbBackupToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-			this.restoreDbBackupToolStripMenuItem.Text = "استعادة نسخة احتياطية لقاعدة البيانات";
-			// 
-			// dbSettingsToolStripMenuItem
-			// 
-			this.dbSettingsToolStripMenuItem.Name = "dbSettingsToolStripMenuItem";
-			this.dbSettingsToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-			this.dbSettingsToolStripMenuItem.Text = "اعدادات قاعدة البيانات";
-			this.dbSettingsToolStripMenuItem.Click += new System.EventHandler(this.dbSettingsToolStripMenuItem_Click);
 			// 
 			// productsToolStripMenuItem
 			// 
@@ -223,22 +167,6 @@
 			this.stockToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
 			this.stockToolStripMenuItem.Text = "المخزن";
 			// 
-			// stockOutToolStripMenuItem
-			// 
-			this.stockOutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("stockOutToolStripMenuItem.Image")));
-			this.stockOutToolStripMenuItem.Name = "stockOutToolStripMenuItem";
-			this.stockOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.stockOutToolStripMenuItem.Text = "صرف";
-			this.stockOutToolStripMenuItem.Click += new System.EventHandler(this.stockOutToolStripMenuItem_Click);
-			// 
-			// fillStockToolStripMenuItem
-			// 
-			this.fillStockToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("fillStockToolStripMenuItem.Image")));
-			this.fillStockToolStripMenuItem.Name = "fillStockToolStripMenuItem";
-			this.fillStockToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.fillStockToolStripMenuItem.Text = "ايداع";
-			this.fillStockToolStripMenuItem.Click += new System.EventHandler(this.fillStockToolStripMenuItem_Click);
-			// 
 			// repotrsToolStripMenuItem
 			// 
 			this.repotrsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -293,6 +221,7 @@
 			this.aboutTheAppToolStripMenuItem.Name = "aboutTheAppToolStripMenuItem";
 			this.aboutTheAppToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
 			this.aboutTheAppToolStripMenuItem.Text = "عن البرنامج";
+			this.aboutTheAppToolStripMenuItem.Click += new System.EventHandler(this.aboutTheAppToolStripMenuItem_Click);
 			// 
 			// groupBox2
 			// 
@@ -509,6 +438,78 @@
 			this.ادارةوحداتالقياسالموجودةToolStripMenuItem.Name = "ادارةوحداتالقياسالموجودةToolStripMenuItem";
 			this.ادارةوحداتالقياسالموجودةToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
 			this.ادارةوحداتالقياسالموجودةToolStripMenuItem.Text = "ادارة وحدات القياس الموجودة";
+			// 
+			// fileToolStripMenuItem
+			// 
+			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.دخولToolStripMenuItem,
+            this.تسجيلالخروجToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.backUpDbToolStripMenuItem,
+            this.restoreDbBackupToolStripMenuItem,
+            this.dbSettingsToolStripMenuItem});
+			this.fileToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Display_16x16;
+			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+			this.fileToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+			this.fileToolStripMenuItem.Text = "ملف";
+			// 
+			// دخولToolStripMenuItem
+			// 
+			this.دخولToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Unlock;
+			this.دخولToolStripMenuItem.Name = "دخولToolStripMenuItem";
+			this.دخولToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.دخولToolStripMenuItem.Text = "دخول";
+			this.دخولToolStripMenuItem.Click += new System.EventHandler(this.دخولToolStripMenuItem_Click);
+			// 
+			// تسجيلالخروجToolStripMenuItem
+			// 
+			this.تسجيلالخروجToolStripMenuItem.Enabled = false;
+			this.تسجيلالخروجToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Lock;
+			this.تسجيلالخروجToolStripMenuItem.Name = "تسجيلالخروجToolStripMenuItem";
+			this.تسجيلالخروجToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.تسجيلالخروجToolStripMenuItem.Text = "تسجيل الخروج";
+			// 
+			// toolStripMenuItem1
+			// 
+			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+			this.toolStripMenuItem1.Size = new System.Drawing.Size(258, 6);
+			// 
+			// backUpDbToolStripMenuItem
+			// 
+			this.backUpDbToolStripMenuItem.Name = "backUpDbToolStripMenuItem";
+			this.backUpDbToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.backUpDbToolStripMenuItem.Text = "نسخة احتياطية لقاعدة البيانات";
+			this.backUpDbToolStripMenuItem.Click += new System.EventHandler(this.backUpDbToolStripMenuItem_Click);
+			// 
+			// restoreDbBackupToolStripMenuItem
+			// 
+			this.restoreDbBackupToolStripMenuItem.Enabled = false;
+			this.restoreDbBackupToolStripMenuItem.Name = "restoreDbBackupToolStripMenuItem";
+			this.restoreDbBackupToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.restoreDbBackupToolStripMenuItem.Text = "استعادة نسخة احتياطية لقاعدة البيانات";
+			// 
+			// dbSettingsToolStripMenuItem
+			// 
+			this.dbSettingsToolStripMenuItem.Name = "dbSettingsToolStripMenuItem";
+			this.dbSettingsToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.dbSettingsToolStripMenuItem.Text = "اعدادات قاعدة البيانات";
+			this.dbSettingsToolStripMenuItem.Click += new System.EventHandler(this.dbSettingsToolStripMenuItem_Click);
+			// 
+			// stockOutToolStripMenuItem
+			// 
+			this.stockOutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("stockOutToolStripMenuItem.Image")));
+			this.stockOutToolStripMenuItem.Name = "stockOutToolStripMenuItem";
+			this.stockOutToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+			this.stockOutToolStripMenuItem.Text = "صرف";
+			this.stockOutToolStripMenuItem.Click += new System.EventHandler(this.stockOutToolStripMenuItem_Click);
+			// 
+			// fillStockToolStripMenuItem
+			// 
+			this.fillStockToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("fillStockToolStripMenuItem.Image")));
+			this.fillStockToolStripMenuItem.Name = "fillStockToolStripMenuItem";
+			this.fillStockToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+			this.fillStockToolStripMenuItem.Text = "ايداع";
+			this.fillStockToolStripMenuItem.Click += new System.EventHandler(this.fillStockToolStripMenuItem_Click);
 			// 
 			// frm_main
 			// 

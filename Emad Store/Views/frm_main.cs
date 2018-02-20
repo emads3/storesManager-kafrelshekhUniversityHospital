@@ -177,6 +177,10 @@ namespace Emad_Store.Views
 		{
 			fillMainScreenInfo();
 		}
-		
+
+		private void aboutTheAppToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			new frm_aboutUs().ShowDialog();
+		}
 	}
 }
