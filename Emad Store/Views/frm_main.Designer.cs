@@ -66,6 +66,7 @@
 			this.textBox9 = new System.Windows.Forms.TextBox();
 			this.textBox10 = new System.Windows.Forms.TextBox();
 			this.label10 = new System.Windows.Forms.Label();
+			this.inStockProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.دخولToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.تسجيلالخروجToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -170,15 +171,17 @@
 			// 
 			// stockOutToolStripMenuItem
 			// 
+			this.stockOutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("stockOutToolStripMenuItem.Image")));
 			this.stockOutToolStripMenuItem.Name = "stockOutToolStripMenuItem";
-			this.stockOutToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+			this.stockOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.stockOutToolStripMenuItem.Text = "صرف";
 			this.stockOutToolStripMenuItem.Click += new System.EventHandler(this.stockOutToolStripMenuItem_Click);
 			// 
 			// fillStockToolStripMenuItem
 			// 
+			this.fillStockToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("fillStockToolStripMenuItem.Image")));
 			this.fillStockToolStripMenuItem.Name = "fillStockToolStripMenuItem";
-			this.fillStockToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+			this.fillStockToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.fillStockToolStripMenuItem.Text = "ايداع";
 			this.fillStockToolStripMenuItem.Click += new System.EventHandler(this.fillStockToolStripMenuItem_Click);
 			// 
@@ -186,6 +189,7 @@
 			// 
 			this.التقاريرToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.rptProductsAboutToFinishToolStripMenuItem,
+            this.inStockProductsToolStripMenuItem,
             this.outOfStockProductsReportToolStripMenuItem,
             this.معدلاتالسحبلكلقسمToolStripMenuItem});
 			this.التقاريرToolStripMenuItem.Name = "التقاريرToolStripMenuItem";
@@ -208,6 +212,7 @@
 			// 
 			// معدلاتالسحبلكلقسمToolStripMenuItem
 			// 
+			this.معدلاتالسحبلكلقسمToolStripMenuItem.Enabled = false;
 			this.معدلاتالسحبلكلقسمToolStripMenuItem.Name = "معدلاتالسحبلكلقسمToolStripMenuItem";
 			this.معدلاتالسحبلكلقسمToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
 			this.معدلاتالسحبلكلقسمToolStripMenuItem.Text = "معدلات السحب لكل قسم";
@@ -411,6 +416,13 @@
 			this.label10.TabIndex = 9;
 			this.label10.Text = "عدد الفواتير المسجلة :";
 			// 
+			// inStockProductsToolStripMenuItem
+			// 
+			this.inStockProductsToolStripMenuItem.Name = "inStockProductsToolStripMenuItem";
+			this.inStockProductsToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+			this.inStockProductsToolStripMenuItem.Text = "جرد المنتجات الموجودة في المخزن";
+			this.inStockProductsToolStripMenuItem.Click += new System.EventHandler(this.inStockProductsToolStripMenuItem_Click);
+			// 
 			// fileToolStripMenuItem
 			// 
 			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -479,12 +491,13 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.IsMdiContainer = true;
 			this.MainMenuStrip = this.menuStrip1;
+			this.MaximizeBox = false;
+			this.MinimizeBox = false;
 			this.Name = "frm_main";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.RightToLeftLayout = true;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "ادارة مخازن مستشفي كفرالشيخ الجامعي - برمجة طلاب كلية الحاسبات بكفر الشيخ";
-			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.Load += new System.EventHandler(this.frm_main_Load);
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
@@ -543,5 +556,6 @@
 		public System.Windows.Forms.TextBox textBox8;
 		public System.Windows.Forms.TextBox textBox9;
 		public System.Windows.Forms.TextBox textBox10;
+		private System.Windows.Forms.ToolStripMenuItem inStockProductsToolStripMenuItem;
 	}
 }

@@ -55,7 +55,7 @@ namespace Emad_Store.Reports
 			{
 				daForGridView = _reportsAndInfo.getLstOutOfStockProducts();
 				label1.Text = "عدد المنتجات المنهية من المخزن :";// edit the label1 text
-				this.Text = "قائمة المنتجات المنهية من المخزن";
+				this.Text = "قائمة المنتجات المنتهية من المخزن";
 			} else if(fState == formState.inStockProducts)
 			{
 				daForGridView = _reportsAndInfo.getLstInOfStockProducts();

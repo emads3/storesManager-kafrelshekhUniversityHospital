@@ -156,5 +156,10 @@ namespace Emad_Store.Views
 		{
 			new Reports.frm_listProductsAboutToFinish(2).Show();
 		}
+
+		private void inStockProductsToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			new Reports.frm_listProductsAboutToFinish(3).Show();
+		}
 	}
 }
