@@ -55,6 +55,7 @@
 			this.Name = "frm_aboutUs";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.RightToLeftLayout = true;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "عن المبرمج";
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);

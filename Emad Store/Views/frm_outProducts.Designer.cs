@@ -508,6 +508,7 @@
 			this.Name = "frm_outProducts";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.RightToLeftLayout = true;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "صرف ادوية و مستحضرات من المخزن";
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();

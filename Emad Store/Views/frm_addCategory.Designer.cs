@@ -128,6 +128,7 @@
 			this.Name = "frm_addCategory";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.RightToLeftLayout = true;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "اضافة تصنيف جديد للادوية";
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();

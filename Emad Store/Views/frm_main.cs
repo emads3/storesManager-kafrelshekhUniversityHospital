@@ -112,9 +112,9 @@ namespace Emad_Store.Views
 
 		private void frm_main_Load(object sender, EventArgs e)
 		{
-			new frm_login().ShowDialog();
-
+			//new frm_login().ShowDialog();
 			fillMainScreenInfo();
+			
 		}
 
 		void fillMainScreenInfo()

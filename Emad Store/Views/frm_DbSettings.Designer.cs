@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DbSettings));
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.txtDBpassword = new System.Windows.Forms.TextBox();
 			this.radioBtnSQL = new System.Windows.Forms.RadioButton();
@@ -199,12 +200,14 @@
 			this.Controls.Add(this.groupBox1);
 			this.Font = new System.Drawing.Font("Tahoma", 9.75F);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "frm_DbSettings";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.RightToLeftLayout = true;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "اعدادات الاتصال بالسيرفر";
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
