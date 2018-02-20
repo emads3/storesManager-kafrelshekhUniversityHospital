@@ -19,6 +19,8 @@ namespace Emad_Store.Views
 		public frm_login()
 		{
 			InitializeComponent();
+
+			txtUsername.Focus();// set the focus to the username textbox on load
 		}
 
 		// close the login form (cencel button)
@@ -30,6 +32,12 @@ namespace Emad_Store.Views
 		// login button
 		private void button1_Click(object sender, EventArgs e)
 		{
+			if(txtUsername.Text == "" || txtPasswd.Text == "")
+			{
+				MessageBox.Show("قم بادخال اسم المستخدم و كلمة السر");
+				return;
+			}
+
 			bool validUser = loginObj.login(txtUsername.Text, txtPasswd.Text);
 
 			if (validUser) // successfull login attempt

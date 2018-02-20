@@ -35,7 +35,6 @@
 			this.txtPasswd = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
-			this.button3 = new System.Windows.Forms.Button();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
@@ -74,7 +73,7 @@
 			this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtUsername.Name = "txtUsername";
 			this.txtUsername.Size = new System.Drawing.Size(222, 23);
-			this.txtUsername.TabIndex = 2;
+			this.txtUsername.TabIndex = 0;
 			// 
 			// txtPasswd
 			// 
@@ -82,7 +81,7 @@
 			this.txtPasswd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtPasswd.Name = "txtPasswd";
 			this.txtPasswd.Size = new System.Drawing.Size(222, 23);
-			this.txtPasswd.TabIndex = 3;
+			this.txtPasswd.TabIndex = 1;
 			this.txtPasswd.UseSystemPasswordChar = true;
 			// 
 			// label1
@@ -102,17 +101,6 @@
 			this.label2.Size = new System.Drawing.Size(69, 16);
 			this.label2.TabIndex = 5;
 			this.label2.Text = "كلمة السر:";
-			// 
-			// button3
-			// 
-			this.button3.Location = new System.Drawing.Point(22, 133);
-			this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(87, 28);
-			this.button3.TabIndex = 6;
-			this.button3.Text = "button3";
-			this.button3.UseVisualStyleBackColor = true;
-			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
 			// groupBox1
 			// 
@@ -137,7 +125,6 @@
 			this.CancelButton = this.button2;
 			this.ClientSize = new System.Drawing.Size(363, 167);
 			this.Controls.Add(this.groupBox1);
-			this.Controls.Add(this.button3);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
 			this.Font = new System.Drawing.Font("Tahoma", 9.75F);
@@ -168,7 +155,6 @@
 		private System.Windows.Forms.TextBox txtPasswd;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.GroupBox groupBox1;
 	}
 }

@@ -49,12 +49,12 @@ namespace Emad_Store.Reports
 
 			if (fState == formState.productsAboutToFinish)
 			{
-				daForGridView = _reportsAndInfo.getLstProductsAboutToFinish(true);
+				daForGridView = _reportsAndInfo.getLstProductsAboutToFinish();
 			}
 			else if (fState == formState.outOfStockProducts)
 			{
 				daForGridView = _reportsAndInfo.getLstOutOfStockProducts();
-				label1.Text = "عدد المنتجات المنهية من المخزن :";// edit the label1 text
+				label1.Text = "عدد المنتجات المنتهية من المخزن :";// edit the label1 text
 				this.Text = "قائمة المنتجات المنتهية من المخزن";
 			} else if(fState == formState.inStockProducts)
 			{
@@ -78,9 +78,13 @@ namespace Emad_Store.Reports
 
 				// edit the columns captions, bcz it comes from the dataset in engish heasers
 				dt.Columns[1].ColumnName = "اسم المنتج - الدواء";
-				dt.Columns[2].ColumnName = "الكميلة الموجودة";
+				dt.Columns[2].ColumnName = "الكمية الموجودة";
+				dt.Columns[3].ColumnName = "تحذير الانتهاء";
+				dt.Columns[4].ColumnName = "وحدة القياس";
+				dt.Columns[5].ColumnName = "وصف المنتج";
 				dt.Columns[6].ColumnName = "اسم المورد";
-				dt.Columns[7].Caption = "التصنيف";
+				dt.Columns[7].ColumnName = "التصنيف";
+				//dt.Columns[7].Caption = "التصنيف";
 			}
 
 
@@ -95,10 +99,11 @@ namespace Emad_Store.Reports
 
 			if (fState == formState.productsAboutToFinish)
 			{
+				DialogResult dr = MessageBox.Show("هل تريد ارفاق المنتجات المنتهية من المخزن ضمن التقرير ؟", "ارفاق المنتجات المنتهية ايضا", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
 
-				if (MessageBox.Show("هل تريد ارفاق المنتجات المنتهية من المخزن ضمن التقرير ؟", "ارفاق المنتجات المنتهية ايضا", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+				if (dr == DialogResult.Yes)
 					da = _reportsAndInfo.getLstProductsAboutToFinish(true);
-				else
+				else if(dr == DialogResult.No) // did't use if..else bcz the user might press cancel
 					da = _reportsAndInfo.getLstProductsAboutToFinish();
 
 			} else if(fState == formState.outOfStockProducts)

@@ -64,7 +64,7 @@ namespace Emad_Store.Views
 			// hide the "unit_id" column from the list
 			// I could delete this column from the stored procedure but I get it to control the product from the id not from its name or data
 			dgvProductsLst.Columns[0].Visible = false;
-			dgvProductsLst.Columns[8].Visible = false;
+			dgvProductsLst.Columns[8].Visible = false;//وحدة القياس
 
 			// categories comboBox
 			cmbFilterByCat.DataSource = productsController.getAllCategories();
