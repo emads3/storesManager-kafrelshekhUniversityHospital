@@ -106,12 +106,16 @@ namespace Emad_Store.Reports
 				else if(dr == DialogResult.No) // did't use if..else bcz the user might press cancel
 					da = _reportsAndInfo.getLstProductsAboutToFinish();
 
+				f.Text = "تقرير المنتجات التي قاربت علي الانتهاء من المخزن";//change the form title
+
 			} else if(fState == formState.outOfStockProducts)
 			{
 				da = _reportsAndInfo.getLstOutOfStockProducts();
+				f.Text = "تقرير بالمنتجات المنتهية من المخزن";
 			} else if(fState == formState.inStockProducts)
 			{
 				da = _reportsAndInfo.getLstInOfStockProducts();
+				f.Text = "تقرير جرد المنتجات الموجودة بالمخزن";
 			}
 
 			da.Fill(ds, "v_get_products_with_details");

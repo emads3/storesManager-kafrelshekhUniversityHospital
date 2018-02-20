@@ -41,20 +41,23 @@
 			this.addNewProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.productsMngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-			this.اقسامالاصنافToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.mngCategoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.اضافةمستخدمجديدToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.ادارةالمستخدمينToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.المخزنToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.stockOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.fillStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.التقاريرToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.repotrsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.rptProductsAboutToFinishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.inStockProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.outOfStockProductsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.معدلاتالسحبلكلقسمToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.مساعدةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.aboutTheAppToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.txtNumOfProductsOutOfStock = new System.Windows.Forms.RichTextBox();
+			this.txtNumProductsAboutToFinish = new System.Windows.Forms.RichTextBox();
 			this.lblRefresh = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
@@ -68,8 +71,11 @@
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.label10 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
-			this.txtNumProductsAboutToFinish = new System.Windows.Forms.RichTextBox();
-			this.txtNumOfProductsOutOfStock = new System.Windows.Forms.RichTextBox();
+			this.كيفيةاستخدامالبرنامجToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
+			this.وحداتالقياسللادويةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.اضافةوحدةقياسجديدةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.ادارةوحداتالقياسالموجودةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.SuspendLayout();
@@ -80,8 +86,9 @@
             this.fileToolStripMenuItem,
             this.productsToolStripMenuItem,
             this.usersToolStripMenuItem,
-            this.المخزنToolStripMenuItem,
-            this.التقاريرToolStripMenuItem});
+            this.stockToolStripMenuItem,
+            this.repotrsToolStripMenuItem,
+            this.مساعدةToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
 			this.menuStrip1.Size = new System.Drawing.Size(830, 24);
@@ -150,8 +157,10 @@
             this.addNewProductToolStripMenuItem,
             this.productsMngToolStripMenuItem,
             this.toolStripMenuItem2,
-            this.اقسامالاصنافToolStripMenuItem,
-            this.mngCategoriesToolStripMenuItem});
+            this.mngCategoriesToolStripMenuItem,
+            this.toolStripMenuItem3,
+            this.وحداتالقياسللادويةToolStripMenuItem});
+			this.productsToolStripMenuItem.Enabled = false;
 			this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
 			this.productsToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
 			this.productsToolStripMenuItem.Text = "المنتجات";
@@ -159,33 +168,26 @@
 			// addNewProductToolStripMenuItem
 			// 
 			this.addNewProductToolStripMenuItem.Name = "addNewProductToolStripMenuItem";
-			this.addNewProductToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+			this.addNewProductToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
 			this.addNewProductToolStripMenuItem.Text = "اضافة متنج جديد";
 			this.addNewProductToolStripMenuItem.Click += new System.EventHandler(this.addNewProductToolStripMenuItem_Click);
 			// 
 			// productsMngToolStripMenuItem
 			// 
 			this.productsMngToolStripMenuItem.Name = "productsMngToolStripMenuItem";
-			this.productsMngToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+			this.productsMngToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
 			this.productsMngToolStripMenuItem.Text = "ادارة المنتجات";
 			this.productsMngToolStripMenuItem.Click += new System.EventHandler(this.productsMngToolStripMenuItem_Click);
 			// 
 			// toolStripMenuItem2
 			// 
 			this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-			this.toolStripMenuItem2.Size = new System.Drawing.Size(176, 6);
-			// 
-			// اقسامالاصنافToolStripMenuItem
-			// 
-			this.اقسامالاصنافToolStripMenuItem.Enabled = false;
-			this.اقسامالاصنافToolStripMenuItem.Name = "اقسامالاصنافToolStripMenuItem";
-			this.اقسامالاصنافToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
-			this.اقسامالاصنافToolStripMenuItem.Text = "اصناف المنتجات";
+			this.toolStripMenuItem2.Size = new System.Drawing.Size(178, 6);
 			// 
 			// mngCategoriesToolStripMenuItem
 			// 
 			this.mngCategoriesToolStripMenuItem.Name = "mngCategoriesToolStripMenuItem";
-			this.mngCategoriesToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+			this.mngCategoriesToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
 			this.mngCategoriesToolStripMenuItem.Text = "ادارة اصناف المنتجات";
 			this.mngCategoriesToolStripMenuItem.Click += new System.EventHandler(this.mngCategoriesToolStripMenuItem_Click);
 			// 
@@ -211,20 +213,21 @@
 			this.ادارةالمستخدمينToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
 			this.ادارةالمستخدمينToolStripMenuItem.Text = "ادارة المستخدمين";
 			// 
-			// المخزنToolStripMenuItem
+			// stockToolStripMenuItem
 			// 
-			this.المخزنToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.stockToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stockOutToolStripMenuItem,
             this.fillStockToolStripMenuItem});
-			this.المخزنToolStripMenuItem.Name = "المخزنToolStripMenuItem";
-			this.المخزنToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-			this.المخزنToolStripMenuItem.Text = "المخزن";
+			this.stockToolStripMenuItem.Enabled = false;
+			this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
+			this.stockToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+			this.stockToolStripMenuItem.Text = "المخزن";
 			// 
 			// stockOutToolStripMenuItem
 			// 
 			this.stockOutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("stockOutToolStripMenuItem.Image")));
 			this.stockOutToolStripMenuItem.Name = "stockOutToolStripMenuItem";
-			this.stockOutToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+			this.stockOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.stockOutToolStripMenuItem.Text = "صرف";
 			this.stockOutToolStripMenuItem.Click += new System.EventHandler(this.stockOutToolStripMenuItem_Click);
 			// 
@@ -232,20 +235,21 @@
 			// 
 			this.fillStockToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("fillStockToolStripMenuItem.Image")));
 			this.fillStockToolStripMenuItem.Name = "fillStockToolStripMenuItem";
-			this.fillStockToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+			this.fillStockToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.fillStockToolStripMenuItem.Text = "ايداع";
 			this.fillStockToolStripMenuItem.Click += new System.EventHandler(this.fillStockToolStripMenuItem_Click);
 			// 
-			// التقاريرToolStripMenuItem
+			// repotrsToolStripMenuItem
 			// 
-			this.التقاريرToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.repotrsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.rptProductsAboutToFinishToolStripMenuItem,
             this.inStockProductsToolStripMenuItem,
             this.outOfStockProductsReportToolStripMenuItem,
             this.معدلاتالسحبلكلقسمToolStripMenuItem});
-			this.التقاريرToolStripMenuItem.Name = "التقاريرToolStripMenuItem";
-			this.التقاريرToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-			this.التقاريرToolStripMenuItem.Text = "التقارير";
+			this.repotrsToolStripMenuItem.Enabled = false;
+			this.repotrsToolStripMenuItem.Name = "repotrsToolStripMenuItem";
+			this.repotrsToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+			this.repotrsToolStripMenuItem.Text = "التقارير";
 			// 
 			// rptProductsAboutToFinishToolStripMenuItem
 			// 
@@ -275,6 +279,21 @@
 			this.معدلاتالسحبلكلقسمToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
 			this.معدلاتالسحبلكلقسمToolStripMenuItem.Text = "معدلات السحب لكل قسم";
 			// 
+			// مساعدةToolStripMenuItem
+			// 
+			this.مساعدةToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutTheAppToolStripMenuItem,
+            this.كيفيةاستخدامالبرنامجToolStripMenuItem});
+			this.مساعدةToolStripMenuItem.Name = "مساعدةToolStripMenuItem";
+			this.مساعدةToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+			this.مساعدةToolStripMenuItem.Text = "مساعدة";
+			// 
+			// aboutTheAppToolStripMenuItem
+			// 
+			this.aboutTheAppToolStripMenuItem.Name = "aboutTheAppToolStripMenuItem";
+			this.aboutTheAppToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+			this.aboutTheAppToolStripMenuItem.Text = "عن البرنامج";
+			// 
 			// groupBox2
 			// 
 			this.groupBox2.Controls.Add(this.txtNumOfProductsOutOfStock);
@@ -300,6 +319,36 @@
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "معلومات سريعة";
 			this.groupBox2.Visible = false;
+			// 
+			// txtNumOfProductsOutOfStock
+			// 
+			this.txtNumOfProductsOutOfStock.Enabled = false;
+			this.txtNumOfProductsOutOfStock.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.txtNumOfProductsOutOfStock.ForeColor = System.Drawing.Color.Red;
+			this.txtNumOfProductsOutOfStock.Location = new System.Drawing.Point(427, 136);
+			this.txtNumOfProductsOutOfStock.Multiline = false;
+			this.txtNumOfProductsOutOfStock.Name = "txtNumOfProductsOutOfStock";
+			this.txtNumOfProductsOutOfStock.ReadOnly = true;
+			this.txtNumOfProductsOutOfStock.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+			this.txtNumOfProductsOutOfStock.ShortcutsEnabled = false;
+			this.txtNumOfProductsOutOfStock.Size = new System.Drawing.Size(98, 21);
+			this.txtNumOfProductsOutOfStock.TabIndex = 23;
+			this.txtNumOfProductsOutOfStock.Text = "";
+			// 
+			// txtNumProductsAboutToFinish
+			// 
+			this.txtNumProductsAboutToFinish.Enabled = false;
+			this.txtNumProductsAboutToFinish.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.txtNumProductsAboutToFinish.ForeColor = System.Drawing.Color.Red;
+			this.txtNumProductsAboutToFinish.Location = new System.Drawing.Point(637, 136);
+			this.txtNumProductsAboutToFinish.Multiline = false;
+			this.txtNumProductsAboutToFinish.Name = "txtNumProductsAboutToFinish";
+			this.txtNumProductsAboutToFinish.ReadOnly = true;
+			this.txtNumProductsAboutToFinish.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+			this.txtNumProductsAboutToFinish.ShortcutsEnabled = false;
+			this.txtNumProductsAboutToFinish.Size = new System.Drawing.Size(98, 21);
+			this.txtNumProductsAboutToFinish.TabIndex = 22;
+			this.txtNumProductsAboutToFinish.Text = "";
 			// 
 			// lblRefresh
 			// 
@@ -426,35 +475,40 @@
 			this.label3.TabIndex = 19;
 			this.label3.Text = "عدد فواتير الايداع :";
 			// 
-			// txtNumProductsAboutToFinish
+			// كيفيةاستخدامالبرنامجToolStripMenuItem
 			// 
-			this.txtNumProductsAboutToFinish.Enabled = false;
-			this.txtNumProductsAboutToFinish.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.txtNumProductsAboutToFinish.ForeColor = System.Drawing.Color.Red;
-			this.txtNumProductsAboutToFinish.Location = new System.Drawing.Point(637, 136);
-			this.txtNumProductsAboutToFinish.Multiline = false;
-			this.txtNumProductsAboutToFinish.Name = "txtNumProductsAboutToFinish";
-			this.txtNumProductsAboutToFinish.ReadOnly = true;
-			this.txtNumProductsAboutToFinish.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-			this.txtNumProductsAboutToFinish.ShortcutsEnabled = false;
-			this.txtNumProductsAboutToFinish.Size = new System.Drawing.Size(98, 21);
-			this.txtNumProductsAboutToFinish.TabIndex = 22;
-			this.txtNumProductsAboutToFinish.Text = "";
+			this.كيفيةاستخدامالبرنامجToolStripMenuItem.Enabled = false;
+			this.كيفيةاستخدامالبرنامجToolStripMenuItem.Name = "كيفيةاستخدامالبرنامجToolStripMenuItem";
+			this.كيفيةاستخدامالبرنامجToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+			this.كيفيةاستخدامالبرنامجToolStripMenuItem.Text = "كيفية استخدام البرنامج";
 			// 
-			// txtNumOfProductsOutOfStock
+			// toolStripMenuItem3
 			// 
-			this.txtNumOfProductsOutOfStock.Enabled = false;
-			this.txtNumOfProductsOutOfStock.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.txtNumOfProductsOutOfStock.ForeColor = System.Drawing.Color.Red;
-			this.txtNumOfProductsOutOfStock.Location = new System.Drawing.Point(427, 136);
-			this.txtNumOfProductsOutOfStock.Multiline = false;
-			this.txtNumOfProductsOutOfStock.Name = "txtNumOfProductsOutOfStock";
-			this.txtNumOfProductsOutOfStock.ReadOnly = true;
-			this.txtNumOfProductsOutOfStock.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-			this.txtNumOfProductsOutOfStock.ShortcutsEnabled = false;
-			this.txtNumOfProductsOutOfStock.Size = new System.Drawing.Size(98, 21);
-			this.txtNumOfProductsOutOfStock.TabIndex = 23;
-			this.txtNumOfProductsOutOfStock.Text = "";
+			this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+			this.toolStripMenuItem3.Size = new System.Drawing.Size(178, 6);
+			// 
+			// وحداتالقياسللادويةToolStripMenuItem
+			// 
+			this.وحداتالقياسللادويةToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.اضافةوحدةقياسجديدةToolStripMenuItem,
+            this.ادارةوحداتالقياسالموجودةToolStripMenuItem});
+			this.وحداتالقياسللادويةToolStripMenuItem.Name = "وحداتالقياسللادويةToolStripMenuItem";
+			this.وحداتالقياسللادويةToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+			this.وحداتالقياسللادويةToolStripMenuItem.Text = "وحدات القياس للادوية";
+			// 
+			// اضافةوحدةقياسجديدةToolStripMenuItem
+			// 
+			this.اضافةوحدةقياسجديدةToolStripMenuItem.Enabled = false;
+			this.اضافةوحدةقياسجديدةToolStripMenuItem.Name = "اضافةوحدةقياسجديدةToolStripMenuItem";
+			this.اضافةوحدةقياسجديدةToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+			this.اضافةوحدةقياسجديدةToolStripMenuItem.Text = "اضافة وحدة قياس جديدة";
+			// 
+			// ادارةوحداتالقياسالموجودةToolStripMenuItem
+			// 
+			this.ادارةوحداتالقياسالموجودةToolStripMenuItem.Enabled = false;
+			this.ادارةوحداتالقياسالموجودةToolStripMenuItem.Name = "ادارةوحداتالقياسالموجودةToolStripMenuItem";
+			this.ادارةوحداتالقياسالموجودةToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+			this.ادارةوحداتالقياسالموجودةToolStripMenuItem.Text = "ادارة وحدات القياس الموجودة";
 			// 
 			// frm_main
 			// 
@@ -497,7 +551,6 @@
 		public System.Windows.Forms.ToolStripMenuItem productsToolStripMenuItem;
 		public System.Windows.Forms.ToolStripMenuItem addNewProductToolStripMenuItem;
 		public System.Windows.Forms.ToolStripMenuItem productsMngToolStripMenuItem;
-		public System.Windows.Forms.ToolStripMenuItem اقسامالاصنافToolStripMenuItem;
 		public System.Windows.Forms.ToolStripMenuItem mngCategoriesToolStripMenuItem;
 		public System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
 		public System.Windows.Forms.ToolStripMenuItem اضافةمستخدمجديدToolStripMenuItem;
@@ -505,11 +558,9 @@
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label10;
-		private System.Windows.Forms.ToolStripMenuItem المخزنToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem stockOutToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem fillStockToolStripMenuItem;
 		public System.Windows.Forms.GroupBox groupBox2;
-		private System.Windows.Forms.ToolStripMenuItem التقاريرToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem dbSettingsToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem outOfStockProductsReportToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem rptProductsAboutToFinishToolStripMenuItem;
@@ -527,5 +578,14 @@
 		private System.Windows.Forms.Label lblRefresh;
 		private System.Windows.Forms.RichTextBox txtNumOfProductsOutOfStock;
 		private System.Windows.Forms.RichTextBox txtNumProductsAboutToFinish;
+		private System.Windows.Forms.ToolStripMenuItem مساعدةToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem aboutTheAppToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem كيفيةاستخدامالبرنامجToolStripMenuItem;
+		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
+		private System.Windows.Forms.ToolStripMenuItem وحداتالقياسللادويةToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem اضافةوحدةقياسجديدةToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem ادارةوحداتالقياسالموجودةToolStripMenuItem;
+		public System.Windows.Forms.ToolStripMenuItem stockToolStripMenuItem;
+		public System.Windows.Forms.ToolStripMenuItem repotrsToolStripMenuItem;
 	}
 }

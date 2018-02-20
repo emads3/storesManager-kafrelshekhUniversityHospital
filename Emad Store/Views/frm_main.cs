@@ -177,5 +177,6 @@ namespace Emad_Store.Views
 		{
 			fillMainScreenInfo();
 		}
+		
 	}
 }

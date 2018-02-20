@@ -140,6 +140,12 @@
       <DependentUpon>rpt_singleCategoryProducts.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Views\frm_aboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_aboutUs.Designer.cs">
+      <DependentUpon>frm_aboutUs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frm_addCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     <EmbeddedResource Include="Reports\rpt_singleCategoryProducts.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rpt_singleCategoryProducts.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_aboutUs.resx">
+      <DependentUpon>frm_aboutUs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frm_addCategory.resx">
       <DependentUpon>frm_addCategory.cs</DependentUpon>

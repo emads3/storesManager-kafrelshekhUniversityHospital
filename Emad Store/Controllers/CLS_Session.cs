@@ -80,6 +80,9 @@ namespace Emad_Store.Controllers
 			Views.frm_main.getMainFormInstance.usersToolStripMenuItem.Enabled = true;
 			Views.frm_main.getMainFormInstance.backUpDbToolStripMenuItem.Enabled = true;
 			Views.frm_main.getMainFormInstance.restoreDbBackupToolStripMenuItem.Enabled = true;
+			Views.frm_main.getMainFormInstance.repotrsToolStripMenuItem.Enabled = true;
+			Views.frm_main.getMainFormInstance.stockToolStripMenuItem.Enabled = true;
+			Views.frm_main.getMainFormInstance.repotrsToolStripMenuItem.Enabled = true;
 
 			Views.frm_main.getMainFormInstance.groupBox2.Visible = true;
 			Views.frm_main.getMainFormInstance.groupBox2.Enabled = true;
