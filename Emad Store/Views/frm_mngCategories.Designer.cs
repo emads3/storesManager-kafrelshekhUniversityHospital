@@ -213,6 +213,7 @@
 			// 
 			// saveCatsProdsToExl
 			// 
+			this.saveCatsProdsToExl.Enabled = false;
 			this.saveCatsProdsToExl.Image = ((System.Drawing.Image)(resources.GetObject("saveCatsProdsToExl.Image")));
 			this.saveCatsProdsToExl.Location = new System.Drawing.Point(396, 91);
 			this.saveCatsProdsToExl.Name = "saveCatsProdsToExl";
@@ -224,6 +225,7 @@
 			// 
 			// saveCatsProdsToPdf
 			// 
+			this.saveCatsProdsToPdf.Enabled = false;
 			this.saveCatsProdsToPdf.Image = ((System.Drawing.Image)(resources.GetObject("saveCatsProdsToPdf.Image")));
 			this.saveCatsProdsToPdf.Location = new System.Drawing.Point(126, 91);
 			this.saveCatsProdsToPdf.Name = "saveCatsProdsToPdf";
@@ -236,6 +238,7 @@
 			// 
 			// exprtAllCatsToExl
 			// 
+			this.exprtAllCatsToExl.Enabled = false;
 			this.exprtAllCatsToExl.Image = ((System.Drawing.Image)(resources.GetObject("exprtAllCatsToExl.Image")));
 			this.exprtAllCatsToExl.Location = new System.Drawing.Point(9, 55);
 			this.exprtAllCatsToExl.Name = "exprtAllCatsToExl";
@@ -247,6 +250,7 @@
 			// 
 			// exprtAllCats2pdf
 			// 
+			this.exprtAllCats2pdf.Enabled = false;
 			this.exprtAllCats2pdf.Image = ((System.Drawing.Image)(resources.GetObject("exprtAllCats2pdf.Image")));
 			this.exprtAllCats2pdf.Location = new System.Drawing.Point(244, 55);
 			this.exprtAllCats2pdf.Name = "exprtAllCats2pdf";
@@ -258,6 +262,7 @@
 			// 
 			// prtAllCats
 			// 
+			this.prtAllCats.Enabled = false;
 			this.prtAllCats.Image = global::Emad_Store.Properties.Resources.Print;
 			this.prtAllCats.Location = new System.Drawing.Point(461, 55);
 			this.prtAllCats.Name = "prtAllCats";
@@ -270,6 +275,7 @@
 			// 
 			// prtSlctCat
 			// 
+			this.prtSlctCat.Enabled = false;
 			this.prtSlctCat.Image = global::Emad_Store.Properties.Resources.Print;
 			this.prtSlctCat.Location = new System.Drawing.Point(600, 55);
 			this.prtSlctCat.Name = "prtSlctCat";

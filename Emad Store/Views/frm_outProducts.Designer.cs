@@ -457,6 +457,7 @@
 			// 
 			// bntSaveBillAsExl
 			// 
+			this.bntSaveBillAsExl.Enabled = false;
 			this.bntSaveBillAsExl.Image = global::Emad_Store.Properties.Resources.if_excel_272697;
 			this.bntSaveBillAsExl.Location = new System.Drawing.Point(133, 22);
 			this.bntSaveBillAsExl.Name = "bntSaveBillAsExl";
@@ -481,6 +482,7 @@
 			// 
 			// bntSaveBillAsPDF
 			// 
+			this.bntSaveBillAsPDF.Enabled = false;
 			this.bntSaveBillAsPDF.Image = global::Emad_Store.Properties.Resources.if_pdf_272711;
 			this.bntSaveBillAsPDF.Location = new System.Drawing.Point(18, 22);
 			this.bntSaveBillAsPDF.Name = "bntSaveBillAsPDF";

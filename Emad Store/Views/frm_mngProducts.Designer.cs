@@ -119,6 +119,7 @@
 			// 
 			// bntExprtPDF
 			// 
+			this.bntExprtPDF.Enabled = false;
 			this.bntExprtPDF.Image = global::Emad_Store.Properties.Resources.if_pdf_272711;
 			this.bntExprtPDF.Location = new System.Drawing.Point(147, 58);
 			this.bntExprtPDF.Name = "bntExprtPDF";
@@ -131,6 +132,7 @@
 			// 
 			// btnExprtExcel
 			// 
+			this.btnExprtExcel.Enabled = false;
 			this.btnExprtExcel.Image = global::Emad_Store.Properties.Resources.if_excel_272697;
 			this.btnExprtExcel.Location = new System.Drawing.Point(370, 58);
 			this.btnExprtExcel.Name = "btnExprtExcel";
@@ -143,6 +145,7 @@
 			// 
 			// btnPrintAllProducts
 			// 
+			this.btnPrintAllProducts.Enabled = false;
 			this.btnPrintAllProducts.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintAllProducts.Image")));
 			this.btnPrintAllProducts.Location = new System.Drawing.Point(607, 58);
 			this.btnPrintAllProducts.Name = "btnPrintAllProducts";
@@ -155,6 +158,7 @@
 			// 
 			// prtSlctdPrdct
 			// 
+			this.prtSlctdPrdct.Enabled = false;
 			this.prtSlctdPrdct.Image = ((System.Drawing.Image)(resources.GetObject("prtSlctdPrdct.Image")));
 			this.prtSlctdPrdct.Location = new System.Drawing.Point(91, 22);
 			this.prtSlctdPrdct.Name = "prtSlctdPrdct";
