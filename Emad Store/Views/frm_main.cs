@@ -120,7 +120,6 @@ namespace Emad_Store.Views
 		void fillMainScreenInfo()
 		{
 			// TODO :: add a condition to make this visible only for allowed users
-			Views.frm_main.getMainFormInstance.txtUsername.Text = Controllers.CLS_RuntimeInfo.getInstance.fullUserName;
 			Views.frm_main.getMainFormInstance.txtNumOfProductsOutOfStock.Text = _reportsAndInfo.getNumOfOutOfStockProducts();
 			Views.frm_main.getMainFormInstance.txtNumProductsAboutToFinish.Text = _reportsAndInfo.getNumOfProductsAboutToFinish();
 			Views.frm_main.getMainFormInstance.txtNumOfBills.Text = _reportsAndInfo.getNumOfRegisteredBills();

@@ -105,6 +105,7 @@ namespace Emad_Store.Controllers
 		void fillMainFormData()
 		{
 			// make some usefull stuff here
+			Views.frm_main.getMainFormInstance.txtUsername.Text = Controllers.CLS_RuntimeInfo.getInstance.fullUserName;
 		}
 
 
