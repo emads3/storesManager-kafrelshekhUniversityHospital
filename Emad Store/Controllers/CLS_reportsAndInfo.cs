@@ -32,6 +32,11 @@ namespace Emad_Store.Controllers
 			return dal.selectDataAdapter("select * from v_get_products_with_details where stock_quantity = 0");
 		}
 
+		public SqlDataAdapter getLstInOfStockProducts()
+		{
+			return dal.selectDataAdapter("select * from v_get_products_with_details where stock_quantity > 0");
+		}
+
 
 		/// <summary>
 		/// number of units in stock, unique units not total units

@@ -21,7 +21,7 @@ namespace Emad_Store.Reports
 	{
 		Controllers.CLS_reportsAndInfo _reportsAndInfo = new Controllers.CLS_reportsAndInfo();
 
-		enum formState { productsAboutToFinish, outOfStockProducts};
+		enum formState { productsAboutToFinish, outOfStockProducts, inStockProducts};
 		formState fState;
 		
 
@@ -34,12 +34,15 @@ namespace Emad_Store.Reports
 			 * form states
 			 *	1 ==> products about to finished from the stock (the list include the out of stock products)
 			 *	2 ==> list ot out of stock products
+			 *	3 ==> in stock products
 			 */
 
 			if (iFormState == 1)
 				fState = formState.productsAboutToFinish;
 			else if (iFormState == 2)
 				fState = formState.outOfStockProducts;
+			else if (iFormState == 3)
+				fState = formState.inStockProducts;
 
 			SqlDataAdapter daForGridView = new SqlDataAdapter();// dataAdapter used to fill the dataset
 			DataTable dt = new DataTable();
@@ -53,6 +56,11 @@ namespace Emad_Store.Reports
 				daForGridView = _reportsAndInfo.getLstOutOfStockProducts();
 				label1.Text = "عدد المنتجات المنهية من المخزن :";// edit the label1 text
 				this.Text = "قائمة المنتجات المنهية من المخزن";
+			} else if(fState == formState.inStockProducts)
+			{
+				daForGridView = _reportsAndInfo.getLstInOfStockProducts();
+				label1.Text = "عدد المنتجات الموجودة في المخزن";// edit the label1 text
+				this.Text = "قائمة المنتجات الموجودة في المخزن";
 			}
 
 
@@ -62,9 +70,11 @@ namespace Emad_Store.Reports
 
 			// in case of the form is used to show  "v_get_products_with_details" from the dataset
 			// so make some modifications
-			if (fState == formState.outOfStockProducts || fState == formState.productsAboutToFinish)
+			if (fState == formState.outOfStockProducts || fState == formState.productsAboutToFinish || fState == formState.inStockProducts)
 			{
 				dataGridView1.Columns[0].Visible = false; // hide the first column (id of the product)
+														  //dataGridView1.Columns[dt.Columns.Count - 1].Visible = false; // hide the last column (id of category)
+				dt.Columns.RemoveAt(dt.Columns.Count - 1); // hide the last column (id of category)
 
 				// edit the columns captions, bcz it comes from the dataset in engish heasers
 				dt.Columns[1].ColumnName = "اسم المنتج - الدواء";
@@ -85,13 +95,18 @@ namespace Emad_Store.Reports
 
 			if (fState == formState.productsAboutToFinish)
 			{
+
 				if (MessageBox.Show("هل تريد ارفاق المنتجات المنتهية من المخزن ضمن التقرير ؟", "ارفاق المنتجات المنتهية ايضا", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 					da = _reportsAndInfo.getLstProductsAboutToFinish(true);
 				else
 					da = _reportsAndInfo.getLstProductsAboutToFinish();
+
 			} else if(fState == formState.outOfStockProducts)
 			{
 				da = _reportsAndInfo.getLstOutOfStockProducts();
+			} else if(fState == formState.inStockProducts)
+			{
+				da = _reportsAndInfo.getLstInOfStockProducts();
 			}
 
 			da.Fill(ds, "v_get_products_with_details");
