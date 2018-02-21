@@ -15,6 +15,16 @@ using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
 
+// namespaces used to access the report objects (to change the the headline of the report "rpt_productsAboutToFinish.rpt") which is used many times so we need to change its headline according to the form state
+/*
+* form states
+*	1 ==> products about to finished from the stock (the list include the out of stock products)
+*	2 ==> list ot out of stock products
+*	3 ==> in stock products
+*/
+using CrystalDecisions.ReportSource;
+using CrystalDecisions.CrystalReports.Engine;
+
 namespace Emad_Store.Reports
 {
 	public partial class frm_listProductsAboutToFinish : Form
@@ -97,6 +107,12 @@ namespace Emad_Store.Reports
 			stockStatusReports.rpt_productsAboutToFinish r = new stockStatusReports.rpt_productsAboutToFinish();  // object of the report
 			Reports.frm_crRpt f = new Reports.frm_crRpt();// object of the report viewer form
 
+
+			// to change the text report headline according to the formsate
+			CrystalDecisions.CrystalReports.Engine.TextObject txtReportHeader;
+			txtReportHeader = r.ReportDefinition.ReportObjects["txtHeadLine"] as TextObject;
+
+
 			if (fState == formState.productsAboutToFinish)
 			{
 				DialogResult dr = MessageBox.Show("هل تريد ارفاق المنتجات المنتهية من المخزن ضمن التقرير ؟", "ارفاق المنتجات المنتهية ايضا", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
@@ -112,10 +128,12 @@ namespace Emad_Store.Reports
 			{
 				da = _reportsAndInfo.getLstOutOfStockProducts();
 				f.Text = "تقرير بالمنتجات المنتهية من المخزن";
+				txtReportHeader.Text = "تقرير بالمنتجات المنتهية من المخزن";
 			} else if(fState == formState.inStockProducts)
 			{
 				da = _reportsAndInfo.getLstInOfStockProducts();
 				f.Text = "تقرير جرد المنتجات الموجودة بالمخزن";
+				txtReportHeader.Text = "تقرير جرد المنتجات الموجودة في المخزن";
 			}
 
 			da.Fill(ds, "v_get_products_with_details");
