@@ -223,8 +223,8 @@ namespace Emad_Store.Views
 						lblState.Text = "الكمية المحددة اكبر من الكمية الموجودة بالمخزن. تم اضافة كل الكمية الموجودة بالمخزن الي القائمة";
 						changeLblState = false;
 					}
-
-					dataGridView1.Rows[omda].Cells[2].Value = quantityInList;
+					else
+						quantityInList += Convert.ToInt32(numUpDwnQntty.Value);
 
 					if (changeLblState)// not to change the state and override the previous msg quickly
 						lblState.Text = "المنتج مضاف من قبل الي القائمة.. تم زيادة الكمية المحددة";
@@ -232,14 +232,16 @@ namespace Emad_Store.Views
 				}
 				else if (formState == e_formStatus.inProducts)
 				{
-					dataGridView1.Rows[omda].Cells[2].Value = quantityInList + Convert.ToInt32(numUpDwnQntty.Value);
+					quantityInList += Convert.ToInt32(numUpDwnQntty.Value);
 					lblState.Text = "المنتج مضاف من قبل الي القائمة.. تم زيادة الكمية المحددة";
 				}
-				
+
+				dataGridView1.Rows[omda].Cells[2].Value = quantityInList;
+
 				clearBoxes();
 
 				return; // end the function
-			}
+			} // end if
 
 			// if the event handler not terminated so .. go through the following
 
