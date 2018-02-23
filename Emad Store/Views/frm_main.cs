@@ -86,22 +86,7 @@ namespace Emad_Store.Views
 
 		private void productsMngToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			// dones not work after applying the singleton pattern
-			/*
-			frm_mngProducts f = new frm_mngProducts();
-			f.ShowDialog();
-			*/
-			//it was a singleton pattern but now not used
-			frm_mngProducts f = frm_mngProducts.get_frm_mngProductsUniqueInstance;
-			try
-			{
-				f.ShowDialog();
-			} catch
-			{
-				// nullreference exception might happen
-				//https://stackoverflow.com/questions/10938075/gridview-updatepanel-sorting-object-reference-not-set-to-an-instance-of-an-objec
-			}
-			//frm_mngProducts.get_frm_mngProductsUniqueInstance.ShowDialog();
+			new frm_mngProducts().ShowDialog();
 		}
 
 		private void mngCategoriesToolStripMenuItem_Click(object sender, EventArgs e)

@@ -41,6 +41,7 @@ namespace Emad_Store.Views
 		// this form is used in this form to select products to be added to the bill
 		frm_mngProducts f;
 
+
 		Controllers.CLS_Products productsController = new Controllers.CLS_Products();
 
 		DataTable dt = new DataTable();
@@ -50,7 +51,7 @@ namespace Emad_Store.Views
 		// used to update the textbox of current time and date to show the user the date of the bill
 		Timer tmr;
 
-		public frm_outProducts(string sFormStatusParam = "outProducts")
+		public frm_outProducts(string sFormStatusParam = "outProducts") // TODO :: change it to int and form state like I did it add products from
 		{
 			// status of the form
 
@@ -116,15 +117,7 @@ namespace Emad_Store.Views
 		{
 			//TODO: if user clicked twice on the show dialog of browse products
 
-
-
-			// object of the form (frm_mngProducts) to show products for the user to select products from it
-			// in order to fill a bill with roducts
-			// I assign an instance to "f" variable bcz if the form was closed, the ojbect is disposed and the functions of the form would not work again
-			// including the event that handles
-			f = frm_mngProducts.get_frm_mngProductsUniqueInstance;
-
-
+			f = new frm_mngProducts();
 			// attach an event from the form (frm_mngProducts) to this eventHandler (which exist in this form -frm_outProducts)
 			//f.dgvProductsLst.SelectionChanged += bindDataFromProductsListToOutProductsForm;
 			f.dgvProductsLst.DoubleClick += bindDataFromProductsListToOutProductsForm;
@@ -136,15 +129,8 @@ namespace Emad_Store.Views
 			f.Size = new System.Drawing.Size(986, 473);     /* resize the form */
 			f.gbOperations.Visible = false;                 /* hide the buttons in group box */
 			f.lblState.Visible = false;                     /* hide the state label */
-			try
-			{
-				f.Show();                                       /* show the form after modifying its layout and view, EMAD */
-			}
-			//after closing the form, the object is disposed, means that f = null, so showing the form again after disposing it requires reinitializing it
-			catch (ObjectDisposedException)
-			{
-				f.Show();
-			}
+			
+			f.Show();                                       /* show the form after modifying its layout and view, EMAD */
 		}
 
 

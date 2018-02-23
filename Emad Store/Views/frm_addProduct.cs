@@ -26,6 +26,18 @@ namespace Emad_Store.Views
 		// this variable has a public setter in this cls, Emad
 		int productIDToUpdt;
 
+		// a variable is assigned by reference of "frm_mngProducts" to control the "frm_mngProducts",
+		// not just an instance of it(instead of the singleton pattern which is complicated and ..
+		// passing the form object reference is a better and wasy solution )
+		frm_mngProducts refOf_frm_mngProducts;
+
+		public frm_mngProducts setMngProdctsVar
+		{
+			set { this.refOf_frm_mngProducts = value; }
+		}
+
+
+
 		Controllers.CLS_Products productsController = new Controllers.CLS_Products();
 		public frm_addProduct()
 		{
@@ -121,19 +133,7 @@ namespace Emad_Store.Views
 				{
 					lblState.Text = "تمت اضافة المنتج " + prodName + " بنجاح";
 					resetForm();
-
-					// refresh the list after the product addition
-					// unique instance of the class (singleton pattern)
-					// if the form was opened from the main form, an exception might happen, if opended from a parent form like frm_mngProducts every thing will go smoothly
-					// so for this reasom I used exception handling
-					try
-					{
-						frm_mngProducts.get_frm_mngProductsUniqueInstance.refreshProductsList();
-					}
-					catch
-					{
-						//
-					}
+					refOf_frm_mngProducts.refreshProductsList();
 				}
 
 			}
@@ -143,13 +143,7 @@ namespace Emad_Store.Views
 				if (updateResult)
 				{
 					lblState.Text = "تمت تعديل المنتج " + prodName + " بنجاح";
-
-					//refresh the products lst
-					// does not work in OOP, bcz this is an instance(another copy) of the class
-					// to solve it, I need to to apply the singleton pattern to make sure that there is only one instance of the form
-					// big solution later TODO: singleton design Pattern
-					// (doneeeeeeeeee) now it's a unique instance of the class "frm_mngProducts"
-					frm_mngProducts.get_frm_mngProductsUniqueInstance.refreshProductsList();
+					refOf_frm_mngProducts.refreshProductsList();
 				}
 
 			}

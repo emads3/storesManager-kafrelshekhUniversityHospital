@@ -46,6 +46,7 @@
 			this.productImg = new System.Windows.Forms.PictureBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.cmbFilterByCat = new System.Windows.Forms.ComboBox();
+			this.checkBoxViewImgOnSelectionChange = new System.Windows.Forms.CheckBox();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvProductsLst)).BeginInit();
 			this.gbOperations.SuspendLayout();
@@ -259,11 +260,23 @@
 			this.cmbFilterByCat.TabIndex = 8;
 			this.cmbFilterByCat.SelectedIndexChanged += new System.EventHandler(this.cmbFilterByCat_SelectedIndexChanged);
 			// 
+			// checkBoxViewImgOnSelectionChange
+			// 
+			this.checkBoxViewImgOnSelectionChange.AutoSize = true;
+			this.checkBoxViewImgOnSelectionChange.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+			this.checkBoxViewImgOnSelectionChange.Location = new System.Drawing.Point(380, 105);
+			this.checkBoxViewImgOnSelectionChange.Name = "checkBoxViewImgOnSelectionChange";
+			this.checkBoxViewImgOnSelectionChange.Size = new System.Drawing.Size(178, 20);
+			this.checkBoxViewImgOnSelectionChange.TabIndex = 9;
+			this.checkBoxViewImgOnSelectionChange.Text = "عرض الصورة عند اختيار المنتج";
+			this.checkBoxViewImgOnSelectionChange.UseVisualStyleBackColor = true;
+			// 
 			// frm_mngProducts
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(970, 572);
+			this.Controls.Add(this.checkBoxViewImgOnSelectionChange);
 			this.Controls.Add(this.cmbFilterByCat);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.productImg);
@@ -309,5 +322,6 @@
 		public System.Windows.Forms.GroupBox gbOperations;
 		public System.Windows.Forms.DataGridView dgvProductsLst;
 		public System.Windows.Forms.Label lblState;
+		private System.Windows.Forms.CheckBox checkBoxViewImgOnSelectionChange;
 	}
 }

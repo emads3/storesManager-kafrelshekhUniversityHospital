@@ -21,42 +21,10 @@ namespace Emad_Store.Views
 	{
 		// object of the products controller that control this form
 		Controllers.CLS_Products productsController = new Controllers.CLS_Products();
-
-		// priavte object of this form (singleton pattern) (1)
-		// I create just one instance of this form to controll it from the (add product form)..
-		// after adding a new product, the frm_addNewProduct refreshes this form so it can be controlled just via one instance
-		private static frm_mngProducts frm_mngProductsUniqueInstance;
-
-		static void frm_closed(object sender, FormClosedEventArgs e)
-		{
-			// (2)
-			frm_mngProductsUniqueInstance = null;
-		}
-
-		// singleton pattern (return just one and only one instance of the class on the runtime) no nultiple instances
-		//(3)
-
-		public static frm_mngProducts get_frm_mngProductsUniqueInstance
-		{
-			get {
-				if (frm_mngProductsUniqueInstance == null)
-				{
-					frm_mngProductsUniqueInstance = new frm_mngProducts();
-					frm_mngProductsUniqueInstance.FormClosed += new FormClosedEventHandler(frm_closed);
-				}
-				return frm_mngProductsUniqueInstance;
-			}
-		}
-
-		// private constructor, to make it impossible to instanciate this class (except from the getter property above ) (singleton pattern)
-		private frm_mngProducts() // set to private (4)
+		
+		public frm_mngProducts()
 		{
 			InitializeComponent();
-
-			// singleton pattern
-			//(5)
-			if (frm_mngProductsUniqueInstance == null)
-				frm_mngProductsUniqueInstance = this;
 
 			// initialize and fill the list
 			refreshProductsList();
@@ -83,6 +51,11 @@ namespace Emad_Store.Views
 		private void button1_Click(object sender, EventArgs e)
 		{
 			frm_addProduct f = new frm_addProduct();
+
+			// pass this form by reference to another form to make the other form control this form
+			// which is used to refresh this form after adding a new product from the "add new product" form
+			f.setMngProdctsVar = this;
+									   
 			f.ShowDialog();
 		}
 
@@ -145,26 +118,30 @@ namespace Emad_Store.Views
 
 		private void dataGridView1_SelectionChanged(object sender, EventArgs e)
 		{
+			// initially this checkbox is always unchecked, note that on form load, the grid view is changed too many times while loading its rows, so the following line will prevent this handler from working many times on form loading
+			// also useful because every time the user select a product, the product img is fetched from the DB,
+			// so if the user pressed the up/down keys it will fetch many useless images from the database
+			if (!checkBoxViewImgOnSelectionChange.Checked)
+				return;
+
 			// get the img from the db, get the first cell in the returned dataTable firstRow[firstColumn]: returned datatable[0][0]
 			// then cast the img to arr of bytes[]
 			// but img maybe null, so we use "InvalidCastException"
-			int productId;
-			if (int.TryParse(this.dgvProductsLst.CurrentRow.Cells[0].Value.ToString(), out productId))
-			{
-				try {
+			int productId = Convert.ToInt32(this.dgvProductsLst.CurrentRow.Cells[0].Value.ToString());
 
-					byte[] prodImg = (byte[])(productsController.getProductImg(productId).Rows[0][0]); // TODO: fix this bug, EMAD
-					System.IO.MemoryStream prodImgStrm = new System.IO.MemoryStream(prodImg);
-					productImg.Image = Image.FromStream(prodImgStrm);
-				}
-				catch (InvalidCastException)
-				{
-					productImg.Image = null;
-				} catch (IndexOutOfRangeException)
-				{
-					productImg.Image = null;
-				}
+			//MessageBox.Show(this.dgvProductsLst.CurrentRow.Cells[0].Value.ToString());// just for debugging
+
+			try
+			{
+				byte[] prodImg = (byte[])(productsController.getProductImg(productId).Rows[0][0]); // TODO: fix this bug, EMAD,, [[fixed]]
+				System.IO.MemoryStream prodImgStrm = new System.IO.MemoryStream(prodImg);
+				productImg.Image = Image.FromStream(prodImgStrm);
 			}
+			catch (InvalidCastException)
+			{
+				productImg.Image = null;
+			}
+			
 		}
 
 		private void btnUpdtList_Click(object sender, EventArgs e)
