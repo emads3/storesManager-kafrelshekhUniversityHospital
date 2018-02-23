@@ -18,8 +18,6 @@ namespace Emad_Store.Views
 {
 	public partial class frm_main : Form
 	{
-		Controllers.CLS_reportsAndInfo _reportsAndInfo = new Controllers.CLS_reportsAndInfo();
-
 		private static frm_main _instance;
 
 		static void frm_FormClosed(object sender, FormClosedEventArgs e)
@@ -98,12 +96,15 @@ namespace Emad_Store.Views
 		private void frm_main_Load(object sender, EventArgs e)
 		{
 			//new frm_login().ShowDialog();
-			fillMainScreenInfo();
+			//fillMainScreenInfo();//moved this function to session control
 			
 		}
 
-		void fillMainScreenInfo()
+		public void fillMainScreenInfo()
 		{
+
+			Controllers.CLS_reportsAndInfo _reportsAndInfo = new Controllers.CLS_reportsAndInfo();
+
 			// TODO :: add a condition to make this visible only for allowed users
 			Views.frm_main.getMainFormInstance.txtNumOfProductsOutOfStock.Text = _reportsAndInfo.getNumOfOutOfStockProducts();
 			Views.frm_main.getMainFormInstance.txtNumProductsAboutToFinish.Text = _reportsAndInfo.getNumOfProductsAboutToFinish();
