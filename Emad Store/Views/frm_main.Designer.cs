@@ -438,7 +438,6 @@
 			this.txtUsername.ReadOnly = true;
 			this.txtUsername.Size = new System.Drawing.Size(154, 22);
 			this.txtUsername.TabIndex = 16;
-			this.txtUsername.Text = "...";
 			// 
 			// label7
 			// 
@@ -485,7 +484,6 @@
 			this.txtTimeDate.ReadOnly = true;
 			this.txtTimeDate.Size = new System.Drawing.Size(150, 22);
 			this.txtTimeDate.TabIndex = 18;
-			this.txtTimeDate.Text = "3 فبراير 2018";
 			// 
 			// txtNumOfBills
 			// 
@@ -505,7 +503,6 @@
 			this.textBox3.ReadOnly = true;
 			this.textBox3.Size = new System.Drawing.Size(100, 22);
 			this.textBox3.TabIndex = 20;
-			this.textBox3.Text = "12 فاتورة";
 			// 
 			// label10
 			// 
