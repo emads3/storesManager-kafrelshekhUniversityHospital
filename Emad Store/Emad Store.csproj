@@ -96,6 +96,7 @@
     <Compile Include="Controllers\CLS_Products.cs" />
     <Compile Include="Controllers\CLS_RuntimeInfo.cs" />
     <Compile Include="Controllers\CLS_Settings.cs" />
+    <Compile Include="Controllers\CLS_users.cs" />
     <Compile Include="dbSchemaAsDataSet.cs">
       <DependentUpon>dbSchemaAsDataSet.xsd</DependentUpon>
     </Compile>
