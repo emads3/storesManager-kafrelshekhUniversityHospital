@@ -69,12 +69,7 @@ namespace Emad_Store.Views
 		{
 			txtTimeDate.Text = DateTime.Now.ToString();
 		}
-
-		private void دخولToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			frm_login frm = new frm_login();
-			frm.ShowDialog();
-		}
+		
 
 		private void addNewProductToolStripMenuItem_Click(object sender, EventArgs e)
 		{
@@ -167,6 +162,21 @@ namespace Emad_Store.Views
 		{
 			new frm_aboutUs().ShowDialog();
 		}
-		
+
+		private void changeUserPasswdToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			new frm_changeUserPasswd().ShowDialog();
+		}
+
+		private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Close();
+		}
+
+		private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			frm_login frm = new frm_login();
+			frm.ShowDialog();
+		}
 	}
 }

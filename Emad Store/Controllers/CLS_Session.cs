@@ -48,7 +48,7 @@ namespace Emad_Store.Controllers
 				string loggedUser_fullName = dt.Rows[0][3].ToString();
 				string loggedUser_phoneNum = dt.Rows[0][4].ToString();
 
-				setRuntimeInfo(loggedUserID, loggedUser_fullName);
+				setRuntimeInfo(loggedUserID, loggedUser_username, loggedUser_fullName);
 
 				controlMenus(); // TODO: enable the menus based on the permissions
 
@@ -91,17 +91,24 @@ namespace Emad_Store.Controllers
 
 			Views.frm_main.getMainFormInstance.dbSettingsToolStripMenuItem.Enabled = false;
 
+			Views.frm_main.getMainFormInstance.changeUserPasswdToolStripMenuItem.Enabled = true;
+			Views.frm_main.getMainFormInstance.changeUserPasswdToolStripMenuItem.Visible = true;
+
+			Views.frm_main.getMainFormInstance.loginToolStripMenuItem.Enabled = false;
+			Views.frm_main.getMainFormInstance.loginToolStripMenuItem.Visible = false;
+
 			fillMainFormData();
 		}
 
 
 		// take an array of permissions and send them to the rumtime class.. take a string of username, int of userID
-		void setRuntimeInfo(int userID, string loggedUser_fullName)
+		void setRuntimeInfo(int userID,string loggedUser_username, string loggedUser_fullName)
 		{
 			//set the info in the runtime class (userID)
 			// note that the application uses this static class' info during the runtime
 			Controllers.CLS_RuntimeInfo.getInstance.userID = userID;						/*	set the userID			*/
-			Controllers.CLS_RuntimeInfo.getInstance.fullUserName = loggedUser_fullName;		/*	set the user full name	*/
+			Controllers.CLS_RuntimeInfo.getInstance.fullUserName = loggedUser_fullName;     /*	set the user full name	*/
+			Controllers.CLS_RuntimeInfo.getInstance.username = loggedUser_username;     /*	set the username*/
 		}
 
 
@@ -116,8 +123,29 @@ namespace Emad_Store.Controllers
 
 
 
+		//change user password
+		public int changeUserPassword(string oldPassword, string newPassword)
+		{
+			bool validUser = login(Controllers.CLS_RuntimeInfo.getInstance.username, oldPassword);
+			if (!validUser)
+				return -2;
 
+			newPassword = GetHashString(newPassword);
 
+			SqlParameter[] param = new SqlParameter[2];
+
+			param[0] = new SqlParameter("@user_id", SqlDbType.Int);
+			param[0].Value = Controllers.CLS_RuntimeInfo.getInstance.userID;
+
+			param[1] = new SqlParameter("@new_passwd", SqlDbType.VarChar, 40);
+			param[1].Value = newPassword;
+
+			if (dal.excuteCommand("sp_change_password", param) == 1)
+				return 0;
+
+			return -3; // will never be reached
+
+		}
 
 
 

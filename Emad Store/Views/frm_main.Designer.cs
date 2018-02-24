@@ -31,8 +31,9 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_main));
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.دخولToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.تسجيلالخروجToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.changeUserPasswdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
 			this.backUpDbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.restoreDbBackupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,8 +99,9 @@
 			// fileToolStripMenuItem
 			// 
 			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.دخولToolStripMenuItem,
-            this.تسجيلالخروجToolStripMenuItem,
+            this.loginToolStripMenuItem,
+            this.changeUserPasswdToolStripMenuItem,
+            this.logOutToolStripMenuItem,
             this.toolStripMenuItem1,
             this.backUpDbToolStripMenuItem,
             this.restoreDbBackupToolStripMenuItem,
@@ -109,21 +111,30 @@
 			this.fileToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
 			this.fileToolStripMenuItem.Text = "ملف";
 			// 
-			// دخولToolStripMenuItem
+			// loginToolStripMenuItem
 			// 
-			this.دخولToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Unlock;
-			this.دخولToolStripMenuItem.Name = "دخولToolStripMenuItem";
-			this.دخولToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-			this.دخولToolStripMenuItem.Text = "دخول";
-			this.دخولToolStripMenuItem.Click += new System.EventHandler(this.دخولToolStripMenuItem_Click);
+			this.loginToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Unlock;
+			this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
+			this.loginToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.loginToolStripMenuItem.Text = "دخول";
+			this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
 			// 
-			// تسجيلالخروجToolStripMenuItem
+			// changeUserPasswdToolStripMenuItem
 			// 
-			this.تسجيلالخروجToolStripMenuItem.Enabled = false;
-			this.تسجيلالخروجToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Lock;
-			this.تسجيلالخروجToolStripMenuItem.Name = "تسجيلالخروجToolStripMenuItem";
-			this.تسجيلالخروجToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-			this.تسجيلالخروجToolStripMenuItem.Text = "تسجيل الخروج";
+			this.changeUserPasswdToolStripMenuItem.Enabled = false;
+			this.changeUserPasswdToolStripMenuItem.Name = "changeUserPasswdToolStripMenuItem";
+			this.changeUserPasswdToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.changeUserPasswdToolStripMenuItem.Text = "تغير كلمة السر";
+			this.changeUserPasswdToolStripMenuItem.Visible = false;
+			this.changeUserPasswdToolStripMenuItem.Click += new System.EventHandler(this.changeUserPasswdToolStripMenuItem_Click);
+			// 
+			// logOutToolStripMenuItem
+			// 
+			this.logOutToolStripMenuItem.Image = global::Emad_Store.Properties.Resources.Lock;
+			this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+			this.logOutToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.logOutToolStripMenuItem.Text = "تسجيل الخروج";
+			this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
 			// 
 			// toolStripMenuItem1
 			// 
@@ -548,8 +559,8 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
 		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
 		public System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-		public System.Windows.Forms.ToolStripMenuItem دخولToolStripMenuItem;
-		public System.Windows.Forms.ToolStripMenuItem تسجيلالخروجToolStripMenuItem;
+		public System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
+		public System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
 		public System.Windows.Forms.ToolStripMenuItem backUpDbToolStripMenuItem;
 		public System.Windows.Forms.ToolStripMenuItem restoreDbBackupToolStripMenuItem;
 		public System.Windows.Forms.ToolStripMenuItem productsToolStripMenuItem;
@@ -591,5 +602,6 @@
 		public System.Windows.Forms.ToolStripMenuItem stockToolStripMenuItem;
 		public System.Windows.Forms.ToolStripMenuItem repotrsToolStripMenuItem;
 		public System.Windows.Forms.ToolStripMenuItem dbSettingsToolStripMenuItem;
+		public System.Windows.Forms.ToolStripMenuItem changeUserPasswdToolStripMenuItem;
 	}
 }
