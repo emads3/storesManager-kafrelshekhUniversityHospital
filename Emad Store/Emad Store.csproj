@@ -399,6 +399,7 @@
       <DependentUpon>kfs_hospital.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\noImg.jpg" />
     <None Include="Resources\out.ico" />
     <None Include="Resources\in.ico" />
   </ItemGroup>

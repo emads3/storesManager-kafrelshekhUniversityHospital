@@ -82,6 +82,8 @@ namespace Emad_Store.Views
 
 		private void deleteSlctPrdct_Click(object sender, EventArgs e)
 		{
+			//TODO :: make sure that the product does not violate the integrity of foreign keys
+			//bcz the products keys is also listed in many other tables list bills and orders
 			string prodName = this.dgvProductsLst.CurrentRow.Cells[1].Value.ToString();
 
 			if (MessageBox.Show("هل انت متأكد من حذف " + prodName, prodName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -131,9 +133,18 @@ namespace Emad_Store.Views
 
 			//MessageBox.Show(this.dgvProductsLst.CurrentRow.Cells[0].Value.ToString());// just for debugging
 
+
+			var imgRetrievedFromDBasObject = productsController.getProductImg(productId).Rows[0][0];
+
+			if (imgRetrievedFromDBasObject is System.DBNull)
+			{
+				productImg.Image = (Image)(Properties.Resources.ResourceManager.GetObject("noImg"));
+				return;
+			}
+
 			try
 			{
-				byte[] prodImg = (byte[])(productsController.getProductImg(productId).Rows[0][0]); // TODO: fix this bug, EMAD,, [[fixed]]
+				byte[] prodImg = (byte[])(imgRetrievedFromDBasObject); // TODO: fix this bug, EMAD,, [[fixed]]
 				System.IO.MemoryStream prodImgStrm = new System.IO.MemoryStream(prodImg);
 				productImg.Image = Image.FromStream(prodImgStrm);
 			}
