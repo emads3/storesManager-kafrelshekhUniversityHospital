@@ -42,7 +42,7 @@
 			this.addNewProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.productsMngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.mngProductsCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.عرضقائمةالمنتجاتفيالمسجلةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.listProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
 			this.mngCategoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
@@ -199,7 +199,7 @@
 			// 
 			this.productsMngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mngProductsCategoryToolStripMenuItem,
-            this.عرضقائمةالمنتجاتفيالمسجلةToolStripMenuItem});
+            this.listProductsToolStripMenuItem});
 			this.productsMngToolStripMenuItem.Name = "productsMngToolStripMenuItem";
 			this.productsMngToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
 			this.productsMngToolStripMenuItem.Text = "ادارة المنتجات";
@@ -211,12 +211,13 @@
 			this.mngProductsCategoryToolStripMenuItem.Text = "ادارة المنتجات";
 			this.mngProductsCategoryToolStripMenuItem.Click += new System.EventHandler(this.mngProductsCategoryToolStripMenuItem_Click);
 			// 
-			// عرضقائمةالمنتجاتفيالمسجلةToolStripMenuItem
+			// listProductsToolStripMenuItem
 			// 
-			this.عرضقائمةالمنتجاتفيالمسجلةToolStripMenuItem.Enabled = false;
-			this.عرضقائمةالمنتجاتفيالمسجلةToolStripMenuItem.Name = "عرضقائمةالمنتجاتفيالمسجلةToolStripMenuItem";
-			this.عرضقائمةالمنتجاتفيالمسجلةToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
-			this.عرضقائمةالمنتجاتفيالمسجلةToolStripMenuItem.Text = "عرض قائمة المنتجات في المسجلة";
+			this.listProductsToolStripMenuItem.Enabled = false;
+			this.listProductsToolStripMenuItem.Name = "listProductsToolStripMenuItem";
+			this.listProductsToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
+			this.listProductsToolStripMenuItem.Text = "عرض قائمة المنتجات المسجلة في السيستم";
+			this.listProductsToolStripMenuItem.Click += new System.EventHandler(this.listProductsToolStripMenuItem_Click);
 			// 
 			// toolStripMenuItem2
 			// 
@@ -665,11 +666,11 @@
 		public System.Windows.Forms.ToolStripMenuItem dbSettingsToolStripMenuItem;
 		public System.Windows.Forms.ToolStripMenuItem changeUserPasswdToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem mngProductsCategoryToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem عرضقائمةالمنتجاتفيالمسجلةToolStripMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
 		private System.Windows.Forms.ToolStripMenuItem الموردينToolStripMenuItem;
 		public System.Windows.Forms.ToolStripMenuItem addNewSupplierToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem viewSuppliersListToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem mngSuppliersToolStripMenuItem;
+		public System.Windows.Forms.ToolStripMenuItem listProductsToolStripMenuItem;
 	}
 }

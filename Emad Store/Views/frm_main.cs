@@ -189,5 +189,20 @@ namespace Emad_Store.Views
 		{
 			new frm_mngProducts().ShowDialog();
 		}
+
+		private void listProductsToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			frm_mngProducts f = new frm_mngProducts();
+
+			// hide some useless info from the form
+			// note that the same form is used to manage the products (CRUD)
+			// but I used it here just to view and list the products (after hiding the buttons and disable them)
+			// also resize the form after hiding the its operation buttons
+			f.Size = new System.Drawing.Size(986, 473);     /* resize the form */
+			f.gbOperations.Visible = false;                 /* hide the buttons in group box */
+			f.lblState.Visible = false;                     /* hide the state label */
+
+			f.Show();                                       /* show the form after modifying its layout and view, EMAD */
+		}
 	}
 }
