@@ -58,6 +58,7 @@ namespace Emad_Store.Controllers
 
 		public int removeUser(string username)
 		{
+			//TODO:: make sure of the db integrity first and violation of foreign keys
 			int result = dal.excuteCommand("delete from users where username = '" + username + "'");
 
 			if (result == 1)
@@ -70,6 +71,7 @@ namespace Emad_Store.Controllers
 		
 		public int removeUser(int userID)
 		{
+			//TODO:: make sure of the db integrity first and violation of foreign keys
 			int result = dal.excuteCommand("delete from users where user_id = " + userID);
 
 			if (result == 1)

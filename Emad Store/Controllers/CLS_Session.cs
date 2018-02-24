@@ -101,6 +101,7 @@ namespace Emad_Store.Controllers
 			if (Controllers.CLS_RuntimeInfo.getInstance.username == "admin")
 			{
 				Views.frm_main.getMainFormInstance.addNewUserToolStripMenuItem.Enabled = true;
+				Views.frm_main.getMainFormInstance.addNewSupplierToolStripMenuItem.Enabled = true;
 			}
 
 			fillMainFormData();

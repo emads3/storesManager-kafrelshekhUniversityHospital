@@ -24,6 +24,7 @@ namespace Emad_Store.Views
 		{
 			string username = txtUsername.Text, fullName = txtFullName.Text, passwd = txtPasswd.Text, phoneNO = txtPhoneNo.Text;
 
+			//validation
 			if(username == "")
 			{
 				MessageBox.Show("لا يمكن ترك اسم الدخول فارغ", "خطا باسم الدخول", MessageBoxButtons.OK, MessageBoxIcon.Error);

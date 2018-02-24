@@ -41,12 +41,19 @@
 			this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.addNewProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.productsMngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.mngProductsCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.عرضقائمةالمنتجاتفيالمسجلةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
 			this.mngCategoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
 			this.وحداتالقياسللادويةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.اضافةوحدةقياسجديدةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.ادارةوحداتالقياسالموجودةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
+			this.الموردينToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.addNewSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.viewSuppliersListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.mngSuppliersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.addNewUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.mngUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -173,7 +180,9 @@
             this.toolStripMenuItem2,
             this.mngCategoriesToolStripMenuItem,
             this.toolStripMenuItem3,
-            this.وحداتالقياسللادويةToolStripMenuItem});
+            this.وحداتالقياسللادويةToolStripMenuItem,
+            this.toolStripMenuItem4,
+            this.الموردينToolStripMenuItem});
 			this.productsToolStripMenuItem.Enabled = false;
 			this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
 			this.productsToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
@@ -188,10 +197,26 @@
 			// 
 			// productsMngToolStripMenuItem
 			// 
+			this.productsMngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mngProductsCategoryToolStripMenuItem,
+            this.عرضقائمةالمنتجاتفيالمسجلةToolStripMenuItem});
 			this.productsMngToolStripMenuItem.Name = "productsMngToolStripMenuItem";
 			this.productsMngToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
 			this.productsMngToolStripMenuItem.Text = "ادارة المنتجات";
-			this.productsMngToolStripMenuItem.Click += new System.EventHandler(this.productsMngToolStripMenuItem_Click);
+			// 
+			// mngProductsCategoryToolStripMenuItem
+			// 
+			this.mngProductsCategoryToolStripMenuItem.Name = "mngProductsCategoryToolStripMenuItem";
+			this.mngProductsCategoryToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+			this.mngProductsCategoryToolStripMenuItem.Text = "ادارة المنتجات";
+			this.mngProductsCategoryToolStripMenuItem.Click += new System.EventHandler(this.mngProductsCategoryToolStripMenuItem_Click);
+			// 
+			// عرضقائمةالمنتجاتفيالمسجلةToolStripMenuItem
+			// 
+			this.عرضقائمةالمنتجاتفيالمسجلةToolStripMenuItem.Enabled = false;
+			this.عرضقائمةالمنتجاتفيالمسجلةToolStripMenuItem.Name = "عرضقائمةالمنتجاتفيالمسجلةToolStripMenuItem";
+			this.عرضقائمةالمنتجاتفيالمسجلةToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+			this.عرضقائمةالمنتجاتفيالمسجلةToolStripMenuItem.Text = "عرض قائمة المنتجات في المسجلة";
 			// 
 			// toolStripMenuItem2
 			// 
@@ -232,6 +257,43 @@
 			this.ادارةوحداتالقياسالموجودةToolStripMenuItem.Name = "ادارةوحداتالقياسالموجودةToolStripMenuItem";
 			this.ادارةوحداتالقياسالموجودةToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
 			this.ادارةوحداتالقياسالموجودةToolStripMenuItem.Text = "ادارة وحدات القياس الموجودة";
+			// 
+			// toolStripMenuItem4
+			// 
+			this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+			this.toolStripMenuItem4.Size = new System.Drawing.Size(178, 6);
+			// 
+			// الموردينToolStripMenuItem
+			// 
+			this.الموردينToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addNewSupplierToolStripMenuItem,
+            this.viewSuppliersListToolStripMenuItem,
+            this.mngSuppliersToolStripMenuItem});
+			this.الموردينToolStripMenuItem.Name = "الموردينToolStripMenuItem";
+			this.الموردينToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+			this.الموردينToolStripMenuItem.Text = "الموردين";
+			// 
+			// addNewSupplierToolStripMenuItem
+			// 
+			this.addNewSupplierToolStripMenuItem.Enabled = false;
+			this.addNewSupplierToolStripMenuItem.Name = "addNewSupplierToolStripMenuItem";
+			this.addNewSupplierToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+			this.addNewSupplierToolStripMenuItem.Text = "اضافة مورد جديد";
+			this.addNewSupplierToolStripMenuItem.Click += new System.EventHandler(this.addNewSupplierToolStripMenuItem_Click);
+			// 
+			// viewSuppliersListToolStripMenuItem
+			// 
+			this.viewSuppliersListToolStripMenuItem.Enabled = false;
+			this.viewSuppliersListToolStripMenuItem.Name = "viewSuppliersListToolStripMenuItem";
+			this.viewSuppliersListToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+			this.viewSuppliersListToolStripMenuItem.Text = "عرض قائمة الموردين";
+			// 
+			// mngSuppliersToolStripMenuItem
+			// 
+			this.mngSuppliersToolStripMenuItem.Enabled = false;
+			this.mngSuppliersToolStripMenuItem.Name = "mngSuppliersToolStripMenuItem";
+			this.mngSuppliersToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+			this.mngSuppliersToolStripMenuItem.Text = "ادارة الموردين";
 			// 
 			// usersToolStripMenuItem
 			// 
@@ -602,5 +664,12 @@
 		public System.Windows.Forms.ToolStripMenuItem repotrsToolStripMenuItem;
 		public System.Windows.Forms.ToolStripMenuItem dbSettingsToolStripMenuItem;
 		public System.Windows.Forms.ToolStripMenuItem changeUserPasswdToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem mngProductsCategoryToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem عرضقائمةالمنتجاتفيالمسجلةToolStripMenuItem;
+		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
+		private System.Windows.Forms.ToolStripMenuItem الموردينToolStripMenuItem;
+		public System.Windows.Forms.ToolStripMenuItem addNewSupplierToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem viewSuppliersListToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem mngSuppliersToolStripMenuItem;
 	}
 }

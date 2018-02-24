@@ -76,11 +76,7 @@ namespace Emad_Store.Views
 			frm_addProduct f = new frm_addProduct();
 			f.ShowDialog();
 		}
-
-		private void productsMngToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			new frm_mngProducts().ShowDialog();
-		}
+		
 
 		private void mngCategoriesToolStripMenuItem_Click(object sender, EventArgs e)
 		{
@@ -182,6 +178,16 @@ namespace Emad_Store.Views
 		private void addNewUserToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			new frm_addUser().ShowDialog();
+		}
+
+		private void addNewSupplierToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			new frm_addSupplier().ShowDialog();
+		}
+
+		private void mngProductsCategoryToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			new frm_mngProducts().ShowDialog();
 		}
 	}
 }

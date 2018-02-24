@@ -96,6 +96,7 @@
     <Compile Include="Controllers\CLS_Products.cs" />
     <Compile Include="Controllers\CLS_RuntimeInfo.cs" />
     <Compile Include="Controllers\CLS_Settings.cs" />
+    <Compile Include="Controllers\CLS_suppliers.cs" />
     <Compile Include="Controllers\CLS_users.cs" />
     <Compile Include="dbSchemaAsDataSet.cs">
       <DependentUpon>dbSchemaAsDataSet.xsd</DependentUpon>
@@ -158,6 +159,12 @@
     </Compile>
     <Compile Include="Views\frm_addProduct.Designer.cs">
       <DependentUpon>frm_addProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frm_addSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_addSupplier.Designer.cs">
+      <DependentUpon>frm_addSupplier.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frm_addUser.cs">
       <SubType>Form</SubType>
@@ -253,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frm_addProduct.resx">
       <DependentUpon>frm_addProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_addSupplier.resx">
+      <DependentUpon>frm_addSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frm_addUser.resx">
       <DependentUpon>frm_addUser.cs</DependentUpon>
