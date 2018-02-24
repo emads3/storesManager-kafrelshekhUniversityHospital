@@ -24,6 +24,8 @@ namespace Emad_Store.Controllers
 		// TODO: this should return a boolean value not a dataTable (fix it) .. fixed (DONE), EMAD
 		public bool login(string username, string password)
 		{
+			if (!dal.testDBConnection())
+				return false;
 
 			string hashedPassword = GetHashString(password);
 
@@ -48,7 +50,7 @@ namespace Emad_Store.Controllers
 
 				setRuntimeInfo(loggedUserID, loggedUser_fullName);
 
-				enableMenus(); // TODO: enable the menus based on the permissions
+				controlMenus(); // TODO: enable the menus based on the permissions
 
 				return true;
 			}
@@ -72,7 +74,7 @@ namespace Emad_Store.Controllers
 		}
 
 
-		void enableMenus()
+		void controlMenus()
 		{
 			// TODO: permissions (enable the menus based on user permissions)
 			Views.frm_main.getMainFormInstance.fileToolStripMenuItem.Enabled = true;
@@ -86,6 +88,8 @@ namespace Emad_Store.Controllers
 
 			Views.frm_main.getMainFormInstance.groupBox2.Visible = true;
 			Views.frm_main.getMainFormInstance.groupBox2.Enabled = true;
+
+			Views.frm_main.getMainFormInstance.dbSettingsToolStripMenuItem.Enabled = false;
 
 			fillMainFormData();
 		}

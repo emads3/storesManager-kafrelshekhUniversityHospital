@@ -69,5 +69,14 @@ namespace Emad_Store.Views
 			txtDBUsername.ReadOnly = true;
 			txtDBpassword.ReadOnly = true;
 		}
+
+		private void btnTestConeection_Click(object sender, EventArgs e)
+		{
+			Models.DataAcessLayer dal = new Models.DataAcessLayer();
+			if (dal.testDBConnection())
+				MessageBox.Show("الاتصال يعمل بشكل صحيح");
+			else
+				MessageBox.Show("يوجد خطأ في الاتصال بقاعدة البيانات");
+		}
 	}
 }

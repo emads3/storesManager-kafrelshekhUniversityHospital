@@ -174,6 +174,33 @@ namespace Emad_Store.Models
 		}
 
 
+		public bool testDBConnection()
+		{
+			bool success = true;
+			string q = "select count(1) from users";
+			try
+			{
+				SqlCommand sqlCmd = new SqlCommand(q, sqlCon);
+				sqlCon.Open();
+				int emad = sqlCmd.ExecuteNonQuery();
+				sqlCon.Close();
+				excuteCommand(q);
+			} catch (Exception e)
+			{
+				string errMsg = e.ToString();
+				errMsg += "\n";
+				errMsg += "عماد سعيد عبدالعزيز";
+				//System.IO.File.WriteAllText(@".\log.txt", errMsg);
+				using (System.IO.StreamWriter file = new System.IO.StreamWriter(@".\log.txt", true))
+				{
+					file.WriteLine(errMsg + "\n\n");
+				}
+				return false;
+			}
+			return success;
+		}
+
+
 		#region immediate editing using dataBinding
 		/*
 		// immediate editing

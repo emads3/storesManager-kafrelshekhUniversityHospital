@@ -43,6 +43,7 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.btnSave = new System.Windows.Forms.Button();
 			this.btnClose = new System.Windows.Forms.Button();
+			this.btnTestConeection = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -190,11 +191,24 @@
 			this.btnClose.UseVisualStyleBackColor = true;
 			this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
 			// 
+			// btnTestConeection
+			// 
+			this.btnTestConeection.Image = global::Emad_Store.Properties.Resources.Globe;
+			this.btnTestConeection.Location = new System.Drawing.Point(12, 235);
+			this.btnTestConeection.Name = "btnTestConeection";
+			this.btnTestConeection.Size = new System.Drawing.Size(154, 32);
+			this.btnTestConeection.TabIndex = 3;
+			this.btnTestConeection.Text = "اختبار الاتصال بالسيرفر";
+			this.btnTestConeection.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnTestConeection.UseVisualStyleBackColor = true;
+			this.btnTestConeection.Click += new System.EventHandler(this.btnTestConeection_Click);
+			// 
 			// frm_DbSettings
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(403, 279);
+			this.Controls.Add(this.btnTestConeection);
 			this.Controls.Add(this.btnClose);
 			this.Controls.Add(this.btnSave);
 			this.Controls.Add(this.groupBox1);
@@ -231,5 +245,6 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Button btnSave;
 		private System.Windows.Forms.Button btnClose;
+		private System.Windows.Forms.Button btnTestConeection;
 	}
 }
