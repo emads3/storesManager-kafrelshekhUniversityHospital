@@ -48,8 +48,8 @@
 			this.اضافةوحدةقياسجديدةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.ادارةوحداتالقياسالموجودةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.اضافةمستخدمجديدToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.ادارةالمستخدمينToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.addNewUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.mngUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.stockOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.fillStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -236,24 +236,26 @@
 			// usersToolStripMenuItem
 			// 
 			this.usersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.اضافةمستخدمجديدToolStripMenuItem,
-            this.ادارةالمستخدمينToolStripMenuItem});
-			this.usersToolStripMenuItem.Enabled = false;
+            this.addNewUserToolStripMenuItem,
+            this.mngUsersToolStripMenuItem});
 			this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
 			this.usersToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
 			this.usersToolStripMenuItem.Text = "المستخدمين";
 			// 
-			// اضافةمستخدمجديدToolStripMenuItem
+			// addNewUserToolStripMenuItem
 			// 
-			this.اضافةمستخدمجديدToolStripMenuItem.Name = "اضافةمستخدمجديدToolStripMenuItem";
-			this.اضافةمستخدمجديدToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-			this.اضافةمستخدمجديدToolStripMenuItem.Text = "اضافة مستخدم جديد";
+			this.addNewUserToolStripMenuItem.Enabled = false;
+			this.addNewUserToolStripMenuItem.Name = "addNewUserToolStripMenuItem";
+			this.addNewUserToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+			this.addNewUserToolStripMenuItem.Text = "اضافة مستخدم جديد";
+			this.addNewUserToolStripMenuItem.Click += new System.EventHandler(this.addNewUserToolStripMenuItem_Click);
 			// 
-			// ادارةالمستخدمينToolStripMenuItem
+			// mngUsersToolStripMenuItem
 			// 
-			this.ادارةالمستخدمينToolStripMenuItem.Name = "ادارةالمستخدمينToolStripMenuItem";
-			this.ادارةالمستخدمينToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-			this.ادارةالمستخدمينToolStripMenuItem.Text = "ادارة المستخدمين";
+			this.mngUsersToolStripMenuItem.Enabled = false;
+			this.mngUsersToolStripMenuItem.Name = "mngUsersToolStripMenuItem";
+			this.mngUsersToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+			this.mngUsersToolStripMenuItem.Text = "ادارة المستخدمين";
 			// 
 			// stockToolStripMenuItem
 			// 
@@ -565,8 +567,8 @@
 		public System.Windows.Forms.ToolStripMenuItem productsMngToolStripMenuItem;
 		public System.Windows.Forms.ToolStripMenuItem mngCategoriesToolStripMenuItem;
 		public System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
-		public System.Windows.Forms.ToolStripMenuItem اضافةمستخدمجديدToolStripMenuItem;
-		public System.Windows.Forms.ToolStripMenuItem ادارةالمستخدمينToolStripMenuItem;
+		public System.Windows.Forms.ToolStripMenuItem addNewUserToolStripMenuItem;
+		public System.Windows.Forms.ToolStripMenuItem mngUsersToolStripMenuItem;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label10;

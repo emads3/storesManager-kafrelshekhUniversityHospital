@@ -159,6 +159,12 @@
     <Compile Include="Views\frm_addProduct.Designer.cs">
       <DependentUpon>frm_addProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frm_addUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_addUser.Designer.cs">
+      <DependentUpon>frm_addUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frm_changeUserPasswd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frm_addProduct.resx">
       <DependentUpon>frm_addProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_addUser.resx">
+      <DependentUpon>frm_addUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frm_changeUserPasswd.resx">
       <DependentUpon>frm_changeUserPasswd.cs</DependentUpon>

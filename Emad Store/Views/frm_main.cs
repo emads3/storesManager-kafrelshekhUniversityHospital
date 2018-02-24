@@ -178,5 +178,10 @@ namespace Emad_Store.Views
 			frm_login frm = new frm_login();
 			frm.ShowDialog();
 		}
+
+		private void addNewUserToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			new frm_addUser().ShowDialog();
+		}
 	}
 }

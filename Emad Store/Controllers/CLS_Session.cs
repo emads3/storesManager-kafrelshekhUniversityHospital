@@ -97,6 +97,12 @@ namespace Emad_Store.Controllers
 			Views.frm_main.getMainFormInstance.loginToolStripMenuItem.Enabled = false;
 			Views.frm_main.getMainFormInstance.loginToolStripMenuItem.Visible = false;
 
+			// change it later to enable it based on permissions and user groups
+			if (Controllers.CLS_RuntimeInfo.getInstance.username == "admin")
+			{
+				Views.frm_main.getMainFormInstance.addNewUserToolStripMenuItem.Enabled = true;
+			}
+
 			fillMainFormData();
 		}
 

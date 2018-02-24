@@ -83,6 +83,7 @@
 			this.txtOldPasswd.Name = "txtOldPasswd";
 			this.txtOldPasswd.Size = new System.Drawing.Size(258, 24);
 			this.txtOldPasswd.TabIndex = 0;
+			this.txtOldPasswd.UseSystemPasswordChar = true;
 			// 
 			// txtNewPasswd
 			// 
