@@ -34,7 +34,7 @@ namespace Emad_Store.Models
 
 			// todo: use "AttachDbFilename" only if the user chose to store the db on the local machine
 			// otherwise give the user an option to install the sqlserver
-			sqlCon = new SqlConnection(@"Data Source=" + dbServerName + ";AttachDbFilename='" + dbName+ "';" + (authMode == "Windows" ? "Integrated Security=True;" : "Integrated Security=false; User ID=" + dbUsername + "; Password=" + dbPasswd + ";") + "Connect Timeout=30");
+			sqlCon = new SqlConnection(@"Data Source=" + dbServerName + ";AttachDbFilename='" + dbName+ "';" + (authMode == "Windows" ? "Integrated Security=True;" : "Integrated Security=false; User ID=" + dbUsername + "; Password=" + dbPasswd + ";") + "Connect Timeout=3");
 		}
 
 		//method to open the connection

@@ -38,14 +38,18 @@ namespace Emad_Store.Views
 				return;
 			}
 
-			bool validUser = loginObj.login(txtUsername.Text, txtPasswd.Text);
+			int validUser = loginObj.login(txtUsername.Text, txtPasswd.Text);
 
-			if (validUser) // successfull login attempt
+			if (validUser == 1) // successfull login attempt
 				this.Close(); // close the login form dialog
-			else
+			else if(validUser == 0)
 			{
 				txtPasswd.Clear();
 				MessageBox.Show("اسم المستخدم او كلمة السر غير صحيحة");
+			}
+			else
+			{
+				MessageBox.Show("حدث خطأ في الاتصال بقاعدة البيانات");
 			}
 		}
 

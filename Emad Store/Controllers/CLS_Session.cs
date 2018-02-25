@@ -22,10 +22,10 @@ namespace Emad_Store.Controllers
 		}
 
 		// TODO: this should return a boolean value not a dataTable (fix it) .. fixed (DONE), EMAD
-		public bool login(string username, string password)
+		public int login(string username, string password)
 		{
 			if (!dal.testDBConnection())
-				return false;
+				return 2;
 
 			string hashedPassword = GetHashString(password);
 
@@ -52,9 +52,9 @@ namespace Emad_Store.Controllers
 
 				controlMenus(); // TODO: enable the menus based on the permissions
 
-				return true;
+				return 1;
 			}
-			return false;
+			return 0;
 		}
 
 
@@ -135,7 +135,13 @@ namespace Emad_Store.Controllers
 		//change user password
 		public int changeUserPassword(string oldPassword, string newPassword)
 		{
-			bool validUser = login(Controllers.CLS_RuntimeInfo.getInstance.username, oldPassword);
+			bool validUser = false;
+
+			int result = login(Controllers.CLS_RuntimeInfo.getInstance.username, oldPassword);
+
+			if (result == 1)
+				validUser = true;
+
 			if (!validUser)
 				return -2;
 
