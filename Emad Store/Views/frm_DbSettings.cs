@@ -72,11 +72,23 @@ namespace Emad_Store.Views
 
 		private void btnTestConeection_Click(object sender, EventArgs e)
 		{
-			Models.DataAcessLayer dal = new Models.DataAcessLayer();
-			if (dal.testDBConnection())
-				MessageBox.Show("الاتصال يعمل بشكل صحيح");
-			else
-				MessageBox.Show("يوجد خطأ في الاتصال بقاعدة البيانات");
+            string[] dbServerInfo = _dbConnectionSettings.getDBserverInfo();
+            string dbServerName = dbServerInfo[0]; //"(LocalDB)\\MSSQLLocalDB";
+            string dbName = dbServerInfo[1]; //"C:\\Users\emad\\documents\\visual studio 2015\\Projects\\Emad Store\\Emad Store\\kfs_hospital.mdf";
+
+            if (dbServerName == "" || dbName == "")// make sure that there is some info stored in the settings
+            {
+                MessageBox.Show("لا يوجد معلومات اتصال بقاعدة البيانات مخزنة في البرنامج");
+                return;
+            }
+            else
+            {
+                Models.DataAcessLayer dal = new Models.DataAcessLayer();
+                if (dal.testDBConnection())
+                    MessageBox.Show("الاتصال يعمل بشكل صحيح");
+                else
+                    MessageBox.Show("يوجد خطأ في الاتصال بقاعدة البيانات");
+            }
 		}
 	}
 }
