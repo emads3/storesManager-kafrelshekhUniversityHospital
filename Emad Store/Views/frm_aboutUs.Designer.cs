@@ -28,42 +28,40 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_aboutUs));
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-			this.SuspendLayout();
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(1, 1);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(428, 380);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.pictureBox1.TabIndex = 0;
-			this.pictureBox1.TabStop = false;
-			// 
-			// frm_aboutUs
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(429, 381);
-			this.Controls.Add(this.pictureBox1);
-			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.MaximizeBox = false;
-			this.MinimizeBox = false;
-			this.Name = "frm_aboutUs";
-			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.RightToLeftLayout = true;
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "عن المبرمج";
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-			this.ResumeLayout(false);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_aboutUs));
+            this.label1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(172, 26);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Developed by Emad Saeed (3m4d)\r\n3m4d54@gmail.com";
+            // 
+            // frm_aboutUs
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(196, 48);
+            this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "frm_aboutUs";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "عن المبرمج";
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 
-		#endregion
+        #endregion
 
-		private System.Windows.Forms.PictureBox pictureBox1;
-	}
+        private System.Windows.Forms.Label label1;
+    }
 }
